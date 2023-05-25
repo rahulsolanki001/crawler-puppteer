@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Food Ordering HTML Template</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/icons.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/red-color.css">
+    <link rel="stylesheet" href="assets/css/yellow-color.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="stylle.css">
+    <style>
+        .loader-container {
+            display: none;
+            text-align: center;
+        }
+
+        .lds-dual-ring {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+        }
+
+        .lds-dual-ring:after {
+            content: " ";
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6px solid #e03335;
+            border-color: #e03335 #0000004a #e03335 #0000004a;
+            animation: lds-dual-ring 1.2s linear infinite;
+        }
+
+        @keyframes lds-dual-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body itemscope>
+    <main>
+        <div class="preloader">
+            <div id="cooking">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div id="area">
+                    <div id="sides">
+                        <div id="pan"></div>
+                        <div id="handle"></div>
+                    </div>
+                    <div id="pancake">
+                        <div id="pastry"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="logo-menu-sec">
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <h1 itemprop="headline"><a href="index.html" title="Home" itemprop="url"><img
+                                    src="assets/images/logo2.png" alt="logo.png" itemprop="image"></a></h1>
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-lg-8">
+                        <div class="page-title-inner">
+                            <!-- <h1 itemprop="headline">Search Your Product Here</h1> -->
+                            <form class="restaurant-search-form brd-rd2">
+                                <div class="row mrg10">
+                                    <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+                                        <div class="input-field brd-rd2">
+                                            <input class="brd-rd2" type="text" placeholder="Product Name"
+                                                id="productName" autocomplete="off">
+                                            <i class="fa fa-shopping-bag"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                                        <div class="input-field brd-rd2">
+                                            <i class="fa fa-map-marker"></i>
+                                            <input class="brd-rd2" type="text" placeholder="Search Location" id="search"
+                                                onclick="initAutocomplete()" autocomplete="off">
+                                            <div id="map"></div>
+                                            <i class="fa fa-times" id="clearButton"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+                                        <button class="brd-rd2 red-bg" type="button" id="btn"
+                                            onclick="sendData()">SEARCH</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="menu-sec">
+                        <ul>
+                            <li><a href="contact.html" title="CONTACT US" itemprop="url"><span
+                                        class="red-clr"></span>CONTACT US</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <section class="mt-4">
+            <div class="container">
+                <div class="row" id="searchContainer" style="margin-top: 40px;">
+
+                </div>
+                <div class="loader-container">
+                    <div class="lds-dual-ring"></div>
+                    <h4>Please wait...</h4>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="bread-crumbs-wrapper">
+            <!-- <div class="container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" title="" itemprop="url">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" title="" itemprop="url">Search</a></li>
+                    <li class="breadcrumb-item active">Restaurants Found</li>
+                </ol>
+            </div> -->
+            <section>
+                <div class="block gray-bg bottom-padd210 top-padd30">
+                    <div class="container">
+                        <div class="row comparing-container">
+                            <div class="col-md-12 p-0">
+                                <div class="obj">
+                                    <img id="brandImage" src="" alt="">
+                                    <h1 id="brandName">name</h1>
+                                    <h1 id="brandPrice">price</h1>
+                                    <!-- <h1 id="brandName">name</h1> -->
+                                </div>
+                            </div>
+                            <div class="col-md-12 p-0">
+                                <div class="price" id="priceContainer">
+                                    <!-- <div class="flex-container">
+                                        <figure><img src="assets/images/blinkit.svg" alt="" /></figure>
+                                        <h4>Rs. 200 </h4>
+                                        <button><span> Visit Store </span></button>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+        </div>
+
+
+
+        <div class="banner">
+            <footer>
+                <div class="block top-padd80 bottom-padd80 dark-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <div class="footer-data">
+                                    <div class="row">
+                                        <div class="col-md-10 col-sm-10 col-lg-6">
+                                            <div class="widget about_widget wow fadeIn" data-wow-delay="0.1s">
+                                                <div class="logo">
+                                                    <h1 itemprop="headline"><a href="#" title="Home" itemprop="url"><img
+                                                                src="assets/images/logo.png" alt="logo.png"
+                                                                itemprop="image"></a></h1>
+                                                </div>
+                                                <p itemprop="description">Food Ordering is a Premium HTML Template. Best
+                                                    choice for your online store. Let purchase it to enjoy now</p>
+                                                <div class="social2">
+                                                    <a class="brd-rd50" href="#" title="Facebook" itemprop="url"
+                                                        target="_blank"><i class="fa fa-facebook"></i></a>
+                                                    <a class="brd-rd50" href="#" title="Google Plus" itemprop="url"
+                                                        target="_blank"><i class="fa fa-google-plus"></i></a>
+                                                    <a class="brd-rd50" href="#" title="Twitter" itemprop="url"
+                                                        target="_blank"><i class="fa fa-twitter"></i></a>
+                                                    <a class="brd-rd50" href="#" title="Pinterest" itemprop="url"
+                                                        target="_blank"><i class="fa fa-pinterest"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-2 col-sm-2 col-lg-2">
+                                            <div class="widget get_in_touch wow fadeIn" data-wow-delay="0.4s">
+                                                <h4 class="widget-title" itemprop="headline">GET IN TOUCH</h4>
+                                                <ul>
+                                                    <li><i class="fa fa-map-marker"></i>sfdffefefwfewfewf sector 153
+                                                        Noida</li>
+                                                    <li><i class="fa fa-phone"></i> +91 - 18001982374</li>
+                                                    <li><i class="fa fa-envelope"></i> <a href="#" title=""
+                                                            itemprop="url">JayyantPanwar80@gmail.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- Footer Data -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer><!-- footer -->
+            <div class="bottom-bar dark-bg text-center">
+                <div class="container">
+                    <p itemprop="description"><a target="_blank" href=""></a></p>
+                </div>
+            </div><!-- Bottom Bar -->
+
+            <!-- <div class="log-popup text-center">
+            <div class="sign-popup-wrapper brd-rd5">
+                <div class="sign-popup-inner brd-rd5">
+                    <a class="log-close-btn" href="#" title="" itemprop="url"><i class="fa fa-close"></i></a>
+                    <div class="sign-popup-title text-center">
+                        <h4 itemprop="headline">SIGN IN</h4>
+                        <span>with your social network</span>
+                    </div>
+                    <div class="popup-social text-center">
+                        <a class="facebook brd-rd3" href="#" title="Facebook" itemprop="url" target="_blank"><i
+                                class="fa fa-facebook"></i> Facebook</a>
+                        <a class="google brd-rd3" href="#" title="Google Plus" itemprop="url" target="_blank"><i
+                                class="fa fa-google-plus"></i> Google</a>
+                        <a class="twitter brd-rd3" href="#" title="Twitter" itemprop="url" target="_blank"><i
+                                class="fa fa-twitter"></i> Twitter</a>
+                    </div>
+                    <span class="popup-seprator text-center"><i class="brd-rd50">or</i></span>
+                    <form class="sign-form">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <input class="brd-rd3" type="text" placeholder="Username or Email">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <input class="brd-rd3" type="password" placeholder="Password">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <button class="red-bg brd-rd3" type="submit">SIGN IN</button>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <a class="sign-btn" href="#" title="" itemprop="url">Not a member? Sign up</a>
+                                <a class="recover-btn" href="#" title="" itemprop="url">Recover my password</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> -->
+
+            <!-- <div class="sign-popup text-center">
+            <div class="sign-popup-wrapper brd-rd5">
+                <div class="sign-popup-inner brd-rd5">
+                    <a class="sign-close-btn" href="#" title="" itemprop="url"><i class="fa fa-close"></i></a>
+                    <div class="sign-popup-title text-center">
+                        <h4 itemprop="headline">SIGN UP</h4>
+                        <span>with your social network</span>
+                    </div>
+                    <div class="popup-social text-center">
+                        <a class="facebook brd-rd3" href="#" title="Facebook" itemprop="url" target="_blank"><i
+                                class="fa fa-facebook"></i> Facebook</a>
+                        <a class="google brd-rd3" href="#" title="Google Plus" itemprop="url" target="_blank"><i
+                                class="fa fa-google-plus"></i> Google</a>
+                        <a class="twitter brd-rd3" href="#" title="Twitter" itemprop="url" target="_blank"><i
+                                class="fa fa-twitter"></i> Twitter</a>
+                    </div>
+                    <span class="popup-seprator text-center"><i class="brd-rd50">or</i></span>
+                    <form class="sign-form">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <input class="brd-rd3" type="text" placeholder="Username">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <input class="brd-rd3" type="email" placeholder="Email">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <input class="brd-rd3" type="password" placeholder="Password">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <button class="red-bg brd-rd3" type="submit">REGISTER NOW</button>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <a class="sign-btn" href="#" title="" itemprop="url">Already Registered? Sign in</a>
+                                <a class="recover-btn" href="#" title="" itemprop="url">Recover my password</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> -->
+
+    </main><!-- Main Wrapper -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbBOosq_YIVNCVtgzTDaca8OI_Mlo_y1Y"></script>
+    <!-- <script> src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArlskABeuY6tOnXnYwrCRhoky3rIRt-E0&libraries=places&callback=initMap"></script> -->
+    <script>
+        document.getElementById("clearButton").addEventListener("click", function () {
+            document.getElementById("search").value = "";
+        });
+
+    </script>
+    <script>
+        function initAutocomplete() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: 48,
+                    lng: 4
+                },
+                zoom: 4,
+                disableDefaultUI: true
+            });
+
+            // Create the search box and link it to the UI element.
+            var input = document.getElementById('search');
+            var autocomplete = new google.maps.places.Autocomplete(input);
+            map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
+            var marker = new google.maps.Marker({
+                map: map
+            });
+
+            // Bias the SearchBox results towards current map's viewport.
+            autocomplete.bindTo('bounds', map);
+            // Set the data fields to return when the user selects a place.
+            autocomplete.setFields(
+                ['address_components', 'geometry', 'name']);
+
+            // Listen for the event fired when the user selects a prediction and retrieve
+            // more details for that place.
+            autocomplete.addListener('place_changed', function () {
+                var place = autocomplete.getPlace();
+                if (!place.geometry) {
+                    console.log("Returned place contains no geometry");
+                    return;
+                }
+                var bounds = new google.maps.LatLngBounds();
+                marker.setPosition(place.geometry.location);
+
+                if (place.geometry.viewport) {
+                    // Only geocodes have viewport.
+                    bounds.union(place.geometry.viewport);
+                } else {
+                    bounds.extend(place.geometry.location);
+                }
+                map.fitBounds(bounds);
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function (event) {
+            initAutocomplete();
+        });
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArlskABeuY6tOnXnYwrCRhoky3rIRt-E0&libraries=places&callback=initMap"></script>
+    <script>
+        function dataManage(res) {
+            $("#search").val(res)
+        };
+    </script>
+
+
+    <script>
+        getLocation()
+        var x = document.getElementById("search");
+        let latitude = "";
+        let longitude = "";
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
+
+            getAddressByLtLng(latitude, longitude)
+        }
+        function getAddressByLtLng(lat, lng) {
+            geocoder = new google.maps.Geocoder();
+            geocoder.geocode({
+                location: {
+                    lat: parseFloat(lat),
+                    lng: parseFloat(lng),
+                }
+            }).then((res) => {
+                console.log(res)
+                $("#search").val(res.results[0].formatted_address)
+            }).catch((error) => {
+                console.log(error)
+                // $("#rectangle").show
+            })
+        }
+        $(".preloader").hide();
+
+
+        // starting code for comparing
+
+        // let instamart = JSON.parse(localStorage.getItem("instamartData"));
+        // let dunzoData = JSON.parse(localStorage.getItem("dunzoData"));
+        let blinkitData = JSON.parse(localStorage.getItem("blinkitData"));
+        // let brandWiseData = [...dunzoData, ...instamart, ...blinkitData];
+        let brandWiseData = [...blinkitData];
+        // console.log(brandWiseData, "s");
+        // console.log(brandWiseData.length, "sl");
+
+        // console.log('hello')
+        let cardValue = JSON.parse(localStorage.getItem("singleView"));
+        var { name, image, price, brandName } = cardValue;
+        document.getElementById('brandName').innerHTML = name;
+        document.getElementById('brandPrice').innerHTML = price;
+        document.getElementById('brandImage').src = image;
+        console.log(cardValue, "cardValue")
+
+        let filterObject = []
+        let dataLength = brandWiseData.length;
+
+        const setBrandImage = (brandName) => {
+            let image;
+            switch (brandName.toLowerCase()) {
+                case "blinkit":
+                    image = "assets/images/blinkit.svg";
+                    break;
+                case "dunzo":
+                    image = "https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-7b2b540792556466133aea6e7c6ae513.png";
+                    break;
+                case "instamart":
+                    image = "assets/images/Instamartlogo.webp";
+                    break;
+            }
+            return image
+        }
+
+        let compareValue = JSON.parse(localStorage.getItem('singleView'));
+        compareValue.price = (compareValue.price.replace(/₹/g, ""));
+        filterObject.push(compareValue)
+
+        console.log(compareValue, "comps")
+        console.log(dataLength, "datslensdkf")
+
+        for (let i = 0; i < dataLength; i++) {
+            let data = brandWiseData[i];
+            // console.log(data)
+            let val = compareFunction(compareValue, data);
+            // console.log(val)
+            // this one is for adding if compare name is greater then 0.5
+            if (val >= 0.3) {
+                data.prox = val;
+                data.price = (data.price.replace(/₹/g, ""));
+                filterObject.push(data)
+            }
+        }
+        // console.log('1', filterObject)
+
+        filterObject = filterObject.filter((obj, index, self) =>
+            index === self.findIndex((t) => (
+                t.name === obj.name
+            ))
+        );
+
+        // this one is for price compare
+        price = parseInt(price.replace(/₹/g, ""))
+
+        let twentyPercent = parseInt((price * 0.2).toFixed(2));
+        let minPrice = price - twentyPercent;
+        let maxPrice = price + twentyPercent;
+
+        filterObject = filterObject.filter(product => {
+            let amount = parseInt(product.price.replace(/₹/g, ""))
+            return amount >= minPrice && amount <= maxPrice;
+        });
+        console.log('filter', filterObject);
+
+        // removing same card from filter object which is clicked.
+
+        filterObject.forEach(item => {
+            let brandName = item.brandName;
+            let priceList = document.getElementById("priceContainer");
+            let comparehtml = "";
+            comparehtml = ` <div class="flex-container " style="justify-content: space-between;">
+                                            <figure><img src="${setBrandImage(brandName)}" alt="" /></figure>
+                                            <h3>${item.price} </h3>
+                                            <h6>${item.name}</h6>
+                                            <button><span> Visit Store </span></button>
+                                        </div>`
+            priceList.innerHTML += comparehtml
+        })
+
+        // this one is for comparing card
+        function compareFunction(compareValue, data) {
+            let nameCompare1 = compareValue.name
+            let nameCompare2 = data.name;
+            // if (typeof (data.name) === "string") {
+            //     nameCompare2 = data.name;
+            // }
+            // else {
+            //     nameCompare2 = data.name[0];
+            //     data.name = nameCompare2;
+            // }
+            // console.log(nameCompare1, nameCompare2, "console.l")
+            nameCompare1 = nameCompare1.replace(/\([^)]*\)/g, "");
+            nameCompare2 = nameCompare2.replace(/\([^)]*\)/g, "");
+            // console.log(nameCompare1, nameCompare2, "con")
+
+            return similarity(nameCompare1, nameCompare2)
+            // const priceCompare1 = compareValue.price;
+            // const priceCompare2 = data.price;
+        }
+
+        // console.log(similarity("hello world", "Hello World"))
+
+        function similarity(s1, s2) {
+            var longer = s1;
+            var shorter = s2;
+            if (s1.length < s2.length) {
+                longer = s2;
+                shorter = s1;
+            }
+            var longerLength = longer.length;
+            if (longerLength == 0) {
+                return 1.0;
+            }
+            return (longerLength - editDistance(longer, shorter)) / parseFloat(longerLength);
+        }
+
+
+        function editDistance(s1, s2) {
+            s1 = s1.toLowerCase();
+            s2 = s2.toLowerCase();
+
+
+            var costs = new Array();
+            for (var i = 0; i <= s1.length; i++) {
+                var lastValue = i;
+                for (var j = 0; j <= s2.length; j++) {
+                    if (i == 0)
+                        costs[j] = j;
+                    else {
+                        if (j > 0) {
+                            var newValue = costs[j - 1];
+                            if (s1.charAt(i - 1) != s2.charAt(j - 1))
+                                newValue = Math.min(Math.min(newValue, lastValue),
+                                    costs[j]) + 1;
+                            costs[j - 1] = lastValue;
+                            lastValue = newValue;
+                        }
+                    }
+                }
+                if (i > 0)
+                    costs[s2.length] = lastValue;
+            }
+            // console.log('coste', costs)
+            return costs[s2.length];
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

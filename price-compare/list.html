@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Food Ordering HTML Template</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/icons.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/red-color.css">
+    <link rel="stylesheet" href="assets/css/yellow-color.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="stylle.css">
+
+    <style>
+       .item-container{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+       
+        .remove-ext{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            
+        }
+
+       .popular-dish-box{
+        width: 275px;
+        margin: 40px;
+       }
+
+       .popular-dish-box img{
+       transform: scale(0.5,0.5);
+        object-fit: cover;
+       }
+    </style>
+</head>
+        <body itemscope>
+            <main>
+                <div class="preloader">
+                    <div id="cooking">
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div id="area">
+                            <div id="sides">
+                                <div id="pan"></div>
+                                <div id="handle"></div>
+                            </div>
+                            <div id="pancake">
+                                <div id="pastry"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+        
+             <!--      HEADER HERE                -->
+             <nav id="navbar"></nav>
+        <div class="bread-crumbs-wrapper">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html" title="" itemprop="url">Home</a></li>
+                    <li class="breadcrumb-item"><a href="product-found.html" title="" itemprop="url">Product list</a>
+                    </li>
+                    <!-- <li class="breadcrumb-item active">Products Compare</li> -->
+                </ol>
+            </div>
+            <section>
+                <div class="block gray-bg bottom-padd210 top-padd30">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <div class="sec-box">
+                                    <div class="sec-wrapper">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-12 col-lg-3">
+                                                <div class="sidebar left">
+                                                    <div class="widget style2 Search_filters wow fadeIn"
+                                                        data-wow-delay="0.2s">
+                                                        <h4 class="widget-title2 sudo-bg-red" itemprop="headline">Search
+                                                            Filters</h4>
+                                                        <div class="widget-data">
+                                                            <ul>
+                                                                <li><a href="#" title="" itemprop="url" id="fruits">Fruits</a>
+                                                                    <span>12</span>
+                                                                </li>
+                                                                <li><a href="#" title="" itemprop="url" id="breadMilk">Bread & Milk</a>
+                                                                    <span>12</span>
+                                                                </li>
+                                                                <li><a href="#" title="" itemprop="url" id="coldrink">Coldrinks</a>
+                                                                    <span>11</span>
+                                                                </li>
+                                                                <li><a href="#" title="" itemprop="url" id="chips">Chips</a>
+                                                                    <span>10</span>
+                                                                </li>
+                                                                <li><a href="#" title="" itemprop="url" id="oilAtta">Oil & Atta</a>
+                                                                    <span>7</span>
+                                                                </li>
+                                                                <li><a href="#" title="" itemprop="url" id="vegetables">Vegetables</a>
+                                                                    <span>7</span>
+                                                                </li>
+                                                                <li><a href="#" title="" itemprop="url" id="icecream">Ice Cream</a>
+                                                                    <span>6</span>
+                                                                </li>
+                                                                <li><a href="#" title="" itemprop="url" id="beauty">Beauty
+                                                                        Products</a> <span>6</span></li>
+                                                                <li><a href="#" title="" itemprop="url" id="grooming">Grooming</a>
+                                                                    <span>11</span>
+                                                                </li>
+                                                                <li><a href="#" title="" itemprop="url" id="packedFood">Packed Food</a>
+                                                                    <span>8</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="widget style2 quick_filters wow fadeIn"
+                                                        data-wow-delay="0.2s">
+                                                        <h4 class="widget-title2 sudo-bg-red" itemprop="headline">Quick
+                                                            Filters</h4>
+                                                        <div class="widget-data">
+                                                            <ul>
+                                                                <li><span class="radio-box"><input type="radio"
+                                                                            name="filter" id="filt1-1"><label
+                                                                            for="filt1-1">Promotions</label></span></li>
+                                                                <li><span class="radio-box"><input type="radio"
+                                                                            name="filter" id="filt1-2"><label
+                                                                            for="filt1-2">Bookmarked</label></span></li>
+                                                                <li><span class="radio-box"><input type="radio"
+                                                                            name="filter" id="filt1-3"><label
+                                                                            for="filt1-3">Pure veg</label></span></li>
+                                                                <li><span class="radio-box"><input type="radio"
+                                                                            name="filter" id="filt1-4"><label
+                                                                            for="filt1-4">Free Delivery</label></span>
+                                                                </li>
+                                                                <li><span class="radio-box"><input type="radio"
+                                                                            name="filter" id="filt1-5"><label
+                                                                            for="filt1-5">Online Payments</label></span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="widget style2 quick_filters wow fadeIn"
+                                                        data-wow-delay="0.2s">
+                                                        <h4 class="widget-title2 sudo-bg-red" itemprop="headline">Quick
+                                                            Filters</h4>
+                                                        <div class="widget-data">
+                                                            <ul>
+                                                                <li><span class="radio-box"><input type="radio"
+                                                                            name="filter2" id="filt2-1"><label
+                                                                            for="filt2-1">No minimum order
+                                                                            6</label></span></li>
+                                                                <li><span class="radio-box"><input type="radio"
+                                                                            name="filter2" id="filt2-2"><label
+                                                                            for="filt2-2">Up to ₹150 69</label></span>
+                                                                </li>
+                                                                <li><span class="radio-box"><input type="radio"
+                                                                            name="filter2" id="filt2-3"><label
+                                                                            for="filt2-3">Up to ₹250 72</label></span>
+                                                                </li>
+                                                                <li><span class="radio-box"><input type="radio"
+                                                                            name="filter2" id="filt2-4"><label
+                                                                            for="filt2-4">Up to ₹500</label></span></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><!--Sidebar -->
+                                            </div>
+                                            <div class="col-md-9 col-sm-12 col-lg-9">
+                                                <div class="title2-wrapper">
+                                                    <h3 class="marginb-0" itemprop="headline">Compare Products</h3>
+                                                </div>
+                                                <div class="remove-ext">
+                                                    <div class="row">
+                                                        
+                                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                                            <div class="featured-restaurant-box with-bg style2 brd-rd12 wow fadeIn"
+                                                                data-wow-delay="0.4s">
+                                                                <div class="featured-restaurant-thumb">
+                                                                    <a href="product-found.html" title=""
+                                                                        itemprop="url"><img
+                                                                            src="assets/images/resource/most-popular-img3.png"
+                                                                            alt="most-popular-img3.png"
+                                                                            itemprop="image"></a>
+                                                                </div>
+                                                                <div class="featured-restaurant-info">
+                                                                    <h4 itemprop="headline"><a
+                                                                            href="product-found.html" title=""
+                                                                            itemprop="url">Cold Drinks</a></h4>
+                                                                    <a class="brd-rd30" href="product-found.html"
+                                                                        title="Order Online"><i
+                                                                            class="fa fa-angle-double-right"></i>
+                                                                            View Products</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                                            <div class="featured-restaurant-box with-bg style2 brd-rd12 wow fadeIn"
+                                                                data-wow-delay="0.5s">
+                                                                <div class="featured-restaurant-thumb">
+                                                                    <a href="product-found.html" title=""
+                                                                        itemprop="url"><img
+                                                                            src="assets/images/resource/most-popular-img4.png"
+                                                                            alt="most-popular-img4.png"
+                                                                            itemprop="image"></a>
+                                                                </div>
+                                                                <div class="featured-restaurant-info">
+                                                                    <h4 itemprop="headline"><a
+                                                                            href="product-found.html" title=""
+                                                                            itemprop="url">Cold Drinks</a></h4>
+                                                                    <a class="brd-rd30" href="product-found.html"
+                                                                        title="Order Online"><i
+                                                                            class="fa fa-angle-double-right"></i>
+                                                                            View Products</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                                            <div class="featured-restaurant-box with-bg style2 brd-rd12 wow fadeIn"
+                                                                data-wow-delay="0.6s">
+                                                                <div class="featured-restaurant-thumb">
+                                                                    <a href="product-found.html" title=""
+                                                                        itemprop="url"><img
+                                                                            src="assets/images/resource/most-popular-img5.png"
+                                                                            alt="most-popular-img5.png"
+                                                                            itemprop="image"></a>
+                                                                </div>
+                                                                <div class="featured-restaurant-info">
+                                                                    <h4 itemprop="headline"><a
+                                                                            href="product-found.html" title=""
+                                                                            itemprop="url">Cold Drinks</a></h4>
+                                                                    <a class="brd-rd30" href="product-found.html"
+                                                                        title="Order Online"><i
+                                                                            class="fa fa-angle-double-right"></i>
+                                                                            View Products</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                                            <div class="featured-restaurant-box with-bg style2 brd-rd12 wow fadeIn"
+                                                                data-wow-delay="0.7s">
+                                                                <div class="featured-restaurant-thumb">
+                                                                    <a href="product-found.html" title=""
+                                                                        itemprop="url"><img
+                                                                            src="assets/images/resource/most-popular-img6.png"
+                                                                            alt="most-popular-img6.png"
+                                                                            itemprop="image"></a>
+                                                                </div>
+                                                                <div class="featured-restaurant-info">
+                                                                    <h4 itemprop="headline"><a
+                                                                            href="product-found.html" title=""
+                                                                            itemprop="url">Cold Drinks</a></h4>
+                                                                    <a class="brd-rd30" href="product-found.html"
+                                                                        title="Order Online"><i
+                                                                            class="fa fa-angle-double-right"></i>
+                                                                            View Products</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                                            <div class="featured-restaurant-box with-bg style2 brd-rd12 wow fadeIn"
+                                                                data-wow-delay="0.8s">
+                                                                <div class="featured-restaurant-thumb">
+                                                                    <a href="product-found.html" title=""
+                                                                        itemprop="url"><img
+                                                                            src="assets/images/resource/most-popular-img7.png"
+                                                                            alt="most-popular-img7.png"
+                                                                            itemprop="image"></a>
+                                                                </div>
+                                                                <div class="featured-restaurant-info">
+                                                                    <h4 itemprop="headline"><a
+                                                                            href="product-found.html" title=""
+                                                                            itemprop="url">Cold Drinks</a></h4>
+                                                                    <a class="brd-rd30" href="product-found.html"
+                                                                        title="Order Online"><i
+                                                                            class="fa fa-angle-double-right"></i>
+                                                                        View Products</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                                            <div class="featured-restaurant-box with-bg style2 brd-rd12 wow fadeIn"
+                                                                data-wow-delay="0.9s">
+                                                                <div class="featured-restaurant-thumb">
+                                                                    <a href="product-found.html" title=""
+                                                                        itemprop="url"><img
+                                                                            src="assets/images/resource/most-popular-img8.png"
+                                                                            alt="most-popular-img8.png"
+                                                                            itemprop="image"></a>
+                                                                </div>
+                                                                <div class="featured-restaurant-info">
+                                                                    <h4 itemprop="headline"><a
+                                                                            href="restaurant-detail.html" title=""
+                                                                            itemprop="url">Cold Drinks</a></h4>
+                                                                    <a class="brd-rd30" href="product-found.html"
+                                                                        title="Order Online"><i
+                                                                            class="fa fa-angle-double-right"></i>
+                                                                            View Products</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="block top-padd80 bottom-padd80 dark-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <div class="footer-data">
+                                    <div class="row">
+                                        <div class="col-md-10 col-sm-10 col-lg-6">
+                                            <div class="widget about_widget wow fadeIn" data-wow-delay="0.1s">
+                                                <div class="logo">
+                                                    <h1 itemprop="headline"><a href="#" title="Home" itemprop="url"><img
+                                                                src="assets/images/logo.png" alt="logo.png"
+                                                                itemprop="image"></a></h1>
+                                                </div>
+                                                <p itemprop="description">Food Ordering is a Premium HTML Template. Best
+                                                    choice for your online store. Let purchase it to enjoy now</p>
+                                                <div class="social2">
+                                                    <a class="brd-rd50" href="#" title="Facebook" itemprop="url"
+                                                        target="_blank"><i class="fa fa-facebook"></i></a>
+                                                    <a class="brd-rd50" href="#" title="Google Plus" itemprop="url"
+                                                        target="_blank"><i class="fa fa-google-plus"></i></a>
+                                                    <a class="brd-rd50" href="#" title="Twitter" itemprop="url"
+                                                        target="_blank"><i class="fa fa-twitter"></i></a>
+                                                    <a class="brd-rd50" href="#" title="Pinterest" itemprop="url"
+                                                        target="_blank"><i class="fa fa-pinterest"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-2 col-sm-2 col-lg-2">
+                                            <div class="widget get_in_touch wow fadeIn" data-wow-delay="0.4s">
+                                                <h4 class="widget-title" itemprop="headline">GET IN TOUCH</h4>
+                                                <ul>
+                                                    <li><i class="fa fa-map-marker"></i>sfdffefefwfewfewf sector 153
+                                                        Noida</li>
+                                                    <li><i class="fa fa-phone"></i> +91 - 18001982374</li>
+                                                    <li><i class="fa fa-envelope"></i> <a href="#" title=""
+                                                            itemprop="url">JayyantPanwar80@gmail.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- Footer Data -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer><!-- footer -->
+            <div class="bottom-bar dark-bg text-center">
+                <div class="container">
+                    <p itemprop="description"><a target="_blank" href=""></a></p>
+                </div>
+            </div>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+            <script type="text/javascript" src="slick/slick.min.js"></script>
+            <script src="./assets/js/jquery.min.js"></script>
+            <script src="./assets/js/bootstrap.min.js"></script>
+            <script src="./assets/js/plugins.js"></script>
+            <script src="./assets/js/main.js"></script>
+              <!--Below script to load header file-->
+             <script>$("#navbar").load("header.html");</script>
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbBOosq_YIVNCVtgzTDaca8OI_Mlo_y1Y&libraries=places"></script>
+    <!-- <script> src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArlskABeuY6tOnXnYwrCRhoky3rIRt-E0&libraries=places&callback=initMap"></script> -->
+   
+    <script>
+       
+         document.getElementById("clearButton").addEventListener("click", function () {
+             document.getElementById("search").value = "";
+         });
+
+    </script>
+    <script>
+        function initAutocomplete() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: 48,
+                    lng: 4
+                },
+                zoom: 4,
+                disableDefaultUI: true
+            });
+
+            // Create the search box and link it to the UI element.
+            var input = document.getElementById('search');
+            var autocomplete = new google.maps.places.Autocomplete(input);
+            map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
+            var marker = new google.maps.Marker({
+                map: map
+            });
+
+            // Bias the SearchBox results towards current map's viewport.
+            autocomplete.bindTo('bounds', map);
+            // Set the data fields to return when the user selects a place.
+            autocomplete.setFields(
+                ['address_components', 'geometry', 'name']);
+
+            // Listen for the event fired when the user selects a prediction and retrieve
+            // more details for that place.
+            autocomplete.addListener('place_changed', function () {
+                var place = autocomplete.getPlace();
+                if (!place.geometry) {
+                    console.log("Returned place contains no geometry");
+                    return;
+                }
+                var bounds = new google.maps.LatLngBounds();
+                marker.setPosition(place.geometry.location);
+
+                if (place.geometry.viewport) {
+                    // Only geocodes have viewport.
+                    bounds.union(place.geometry.viewport);
+                } else {
+                    bounds.extend(place.geometry.location);
+                }
+                map.fitBounds(bounds);
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function (event) {
+            initAutocomplete();
+        });
+    </script>
+    <!-- <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbBOosq_YIVNCVtgzTDaca8OI_Mlo_y1Y&libraries=places&callback=initMap"></script> -->
+    <script>
+        function dataManage(res) {
+            $("#search").val(res)
+        };
+    </script>
+
+    <script>
+        getLocation()
+        var x = document.getElementById("search");
+        let latitude = "";
+        let longitude = "";
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
+
+            getAddressByLtLng(latitude, longitude)
+        }
+        function getAddressByLtLng(lat, lng) {
+            geocoder = new google.maps.Geocoder();
+            geocoder.geocode({
+                location: {
+                    lat: parseFloat(lat),
+                    lng: parseFloat(lng),
+                }
+
+            }).then((res) => {
+                console.log(res)
+
+                $("#search").val(res.results[0].formatted_address)
+
+
+            }).catch((error) => {
+                console.log(error)
+                // $("#rectangle").show
+            })
+        }
+        // function getPlace() {
+        //     var map = new google.maps.Map(document.getElementById('map'), {
+        //         zoom: 16,
+        //         center: uluru
+        //     });
+        //     var marker = new google.maps.Marker({
+        //         position: uluru,
+        //         map: map,
+        //         draggable: true
+        //     });
+        // }
+    </script>
+
+            <script>
+                $(".preloader").hide()
+
+
+               
+            
+              
+        
+                
+    const products=[
+        {
+            "name":"Mango",
+            "search-name":"Alphonso Mango",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/363834a.jpg?ts=1681295572"
+        },{
+            "name":"Watermelon",
+            "search-name":"kiran watermelon",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/369752a.jpg?ts=1658731562"
+        },{
+            "name":"grapes",
+            "search-name":"green grapes",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/347025a.jpg?ts=1652855625"
+        },{
+            "name":"Oranges",
+            "search-name":"nagpur orange",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/197975a.jpg?ts=1681040168"
+        },{
+            "name":"Apple",
+            "search-name":"shimla apple",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/428612a.jpg?ts=1658731563"
+        },{
+            "name":"Coconut",
+            "search-name":"brown coconut",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/4943a.jpg?ts=1664284085"
+        },{
+            "name":"ananas",
+            "search-name":"pineapple",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/190320a.jpg?ts=1639563832"
+        },{
+            "name":"Guava",
+            "search-name":"thai guava",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/458760a.jpg?ts=1637671022"
+        },{
+            "name":"kiwi",
+            "search-name":"zespri green kiwi",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/337437a.jpg?ts=1662109239"
+        },{
+            "name":"dates",
+            "search-name":"kimia dates",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/53888a.jpg"
+        },{
+            "name":"banana",
+            "search-name":"baby banana",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/342340a.jpg?ts=1679464054"
+        },{
+            "name":"jamun",
+            "search-name":"java plum kala",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/458953a.jpg"
+        },{
+            "name":"White Bread",
+            "search-name":"harvest gold white bread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/448095a.jpg?ts=1661157752"
+        },{
+            "name":"Brown Bread",
+            "search-name":"harvest gold brown bread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/24194a.jpg?ts=1661157751"
+        },{
+            "name":" Whole Wheat Bread",
+            "search-name":"english oven whole wheat bread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/383411a.jpg?ts=1675775414"
+        },{
+            "name":"Atta Bread",
+            "search-name":"harvest gold atta bread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/448096a.jpg?ts=1661157752"
+        },{
+            "name":"Multigrain Bread",
+            "search-name":"britania multigrain bread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/111463a.jpg?ts=1654679437"
+        },{
+            "name":"Bun",
+            "search-name":"english oven pav",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/18402a.jpg?ts=1657259224"
+        },{
+
+            "name":"Kulcha",
+            "search-name":"britania kulcha",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/335820a.jpg?ts=1613137900"
+        },{
+            "name":"Toned Milk",
+            "search-name":"amul toned milk",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/19512a.jpg?ts=1647923044"
+        },{
+            "name":"Full Cream Milk",
+            "search-name":"mother dairy full cream milk",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/19924a.jpg?ts=1644476636"
+        },{
+            "name":"Cow Fresh Milk",
+            "search-name":"mother dairy cow fresh milk",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/339309a.jpg"
+        },{
+            "name":"Lactose Free Milk",
+            "search-name":"amul lactose free milk",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/206314a.jpg?ts=1589186576"
+        },{
+            "name":"Soy Milk",
+            "search-name":"sofit soy milk",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/422749a.jpg?ts=1679550340"
+        },  {
+            "name":"cold drink",
+            "search-name":"coca-cola",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/283a.jpg?ts=1657699524"
+        },{
+            "name":"Non Alcoholic Beer",
+            "search-name":"Coolberg Cranberry non-alcoholic beer",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/456321a.jpg?ts=1627393208"
+        },{
+            "name":"Masala Soda Drink",
+            "search-name":"lahori zeera masala soda",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/497383a.jpg"
+        },{
+            "name":"Mango Drink",
+            "search-name":"Slice drink",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/32790a.jpg?ts=1588938067"
+        },{
+            "name":"Mixed Fruit Juice",
+            "search-name":"real mixed fruit",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_215472.jpg?ts=1653393770"
+        },{
+            "name":"Apple Juice",
+            "search-name":"appy apple juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/500869a.jpg"
+        },{
+            "name":"Cranberry Juice",
+            "search-name":"tropicana cranberry juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/45363a.jpg"
+        },{
+            "name":"orange juice",
+            "search-name":"b natural orange juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/33218a.jpg?ts=1680528255"
+        },{
+            "name":"Mosambi Juice",
+            "search-name":"real mosambi juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/62221a.jpg?ts=1650622549"
+        },{
+            "name":"Guava Juice",
+            "search-name":"fresca guava juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_483973.jpg?ts=1653900370"
+        },{
+            "name":"Litchi Juice",
+            "search-name":"fresca litchi juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/480578a.jpg?ts=1663053108"
+        }, {
+            "name":"Lays",
+            "search-name":"lays magic masala",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/240092a.jpg?ts=1668146939"
+        },
+        {
+            "name":"Kurkure",
+            "search-name":"kurkure masala munch",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_271303.jpg"
+        },{
+            "name":"Uncle Chips",
+            "search-name":"uncle chipps spicy treat flavour",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_395336.jpg?ts=1668152050"
+        },{
+            "name":"pringles",
+            "search-name":"pringles sour and cream",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/33863a.jpg?ts=1675842248"
+        },{
+            "name":"Bingo",
+            "search-name":"bingo mad angles tomato madness",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_401231.jpg?ts=1653897640"
+        },{
+            "name":"Naachos",
+            "search-name":"doritos cheese nacchos",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/432818a.jpg?ts=1669469997"
+        },{
+            "name":"Aloo Bhujia",
+            "search-name":"haldiram aloo bhujia",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/380252a.jpg?ts=1672286803"
+        },{
+            "name":"Kaju Mixture Namkeen",
+            "search-name":"haldiram kaju mixture namkeen",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/11187a.jpg"
+        },{
+            "name":"Salted Peanuts",
+            "search-name":"haldiram classic salted peanuts",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_481985.jpg?ts=1653898886"
+        },{
+            "name":"Nut Cracker",
+            "search-name":"haldiram nut cracker",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_481989.jpg?ts=1661324838"
+        }, {
+            "name":"Whole Wheat Atta",
+            "search-name":"Aashirwaad whole wheat aata",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/333324a.jpg?ts=1680539705"
+        },{
+            "name":"Multigrain Atta",
+            "search-name":"pilsbury multigrain atta",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/3867a.jpg?ts=1628503612"
+        },{
+            "name":"Soyabean Oil",
+            "search-name":"fortune refined soyabean oil",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/52a.jpg?ts=1624964816"
+        },{
+            "name":"Mustard Oil",
+            "search-name":"pansari kachi ghani mustard oil",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/103115a.jpg?ts=1668168909"
+        },{
+            "name":"Rice Bran Oil",
+            "search-name":"fortune rice bran oil",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/14624a.jpg?ts=1624885138"
+        },{
+            "name":"Sunflower Oil",
+            "search-name":"fortune sunflower oil",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/400963a.jpg?ts=1583125763"
+        },{
+            "name":"Olive Oil",
+            "search-name":"figaro extra virgin olive oil",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/9349a.jpg?ts=1636526081"
+        }, {
+            "name":"Ful Ghobi",
+            "search-name":"Cauliflower",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467646a.jpg?ts=1651220576"
+        },{
+            "name":"Chukandar",
+            "search-name":"beetroot",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467637a.jpg?ts=1673944535"
+        },{
+            "name":"Onion",
+            "search-name":"organic pyaz",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467655a.jpg?ts=1673945238"
+        },{
+            "name":"lawkey",
+            "search-name":"bottle gourd",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467639a.jpg?ts=1666864261"
+        },{
+            "name":"Shimla Mirch",
+            "search-name":"green capsicum",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/340626a.jpg?ts=1667470862"
+        },{
+            "name":"Adhrak",
+            "search-name":"ginger",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467652a.jpg?ts=1673945214"
+        },{
+            "name":"Lehsun",
+            "search-name":"garlic",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467651a.jpg?ts=1673945199"
+        }, {
+            "name":"Choclate Ice Cream",
+            "search-name":"vadilal gourmet choclate ice cream",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/482628a.jpg?ts=1679484378"
+        },{
+            "name":"Vanilla Ice Cream",
+            "search-name":"amul vanilla ice cream",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/438914a.jpg?ts=1672030442"
+        },{
+            "name":"Mango Ice Cream",
+            "search-name":"creampot mango frozen dessert",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/483745a.jpg"
+        },{
+            "name":"Butterscotch Ice Cream",
+            "search-name":"Vadilal gourmet butterscotch ice cream",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/482621a.jpg?ts=1672381958"
+        },{
+            "name":"Cone Ice Cream",
+            "search-name":"kwality walls cornetto",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/450546a.jpg?ts=1661421808"
+        },{
+            "name":"Ice Cream Stick",
+            "search-name":"kwality walls magnum",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/450560a.jpg?ts=1661421808"
+        },   {
+            "name":"Lipstick",
+            "search-name":"lakme forever lipstick",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/495629a.jpg?ts=1674471371"
+        },{
+            "name":"Compact Powder",
+            "search-name":"maybelline new york compact powder",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/477224a.jpg?ts=1675428534"
+        },{
+            "name":"Hair Mask",
+            "search-name":"pilgrim argan oil hair mask",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/492983a.jpg?ts=1680779417"
+        },
+        {
+            "name":"Body Lotion",
+            "search-name":"nivia body lotion",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/443265a.jpg?ts=1678868037"
+        },{
+            "name":"Eyeliner",
+            "search-name":"maybelline new york eyeliner",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/477220a.jpg?ts=1675428420"
+        },{
+            "name":"Kajal",
+            "search-name":"lakme iconic black kajal",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/36800a.jpg?ts=1641194858"
+        },  {
+            "name":"Toothpaste",
+            "search-name":"pepsodent toothpaste",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/974a.jpg?ts=1643120589"
+        },{
+            "name":"Toothbrush",
+            "search-name":"oralb toothbrush",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/401914a.jpg?ts=1674651733"
+        },{
+            "name":"Electric Toothbrush",
+            "search-name":"colgate electric toothbrush",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/490669a.jpg"
+        },{
+            "name":"Charcoal Face Wash",
+            "search-name":"nivea charcoal facewash",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/23960a.jpg?ts=1591260811"
+        },{
+            "name":"Herbal Face Wash",
+            "search-name":"lotus herbal facewash",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/493739a.jpg"
+        },{
+            "name":"Sunscreen",
+            "search-name":"lakme sunscreen",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/416407a.jpg?ts=1680785290"
+        },{
+            "name":"Bathing Soap",
+            "search-name":"dettol bathing soap",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/270248a.jpg?ts=1672317444"
+        },{
+            "name":"Deodrant Soap",
+            "search-name":"wildstone deodrant soap",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/496985a.jpg"
+        },{
+            "name":"Moisturizing Cream",
+            "search-name":"nivea mosturizing cream",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/19962a.jpg?ts=1647003456"
+        },{
+            "name":"Anti Dandruff Shampoo",
+            "search-name":"head and shoulders shampoo",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/91025a.jpg?ts=1669187623"
+        },{
+            "name":"Hair Conditioner",
+            "search-name":"dove hair conditioner",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/19640a.jpg?ts=1679465777"
+        },{
+            "name":"Candy",
+            "search-name":"alpenliebe eclairs candy",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/425350a.jpg?ts=1680680832"
+        },{
+            "name":"Choclate",
+            "search-name":"cadbury dairy milk choclate",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_378161.jpg?ts=1674802461"
+        },{
+            "name":"Coconut Chocolate",
+            "search-name":"bounty choclate coconut",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/498788a.jpg?ts=1676286750"
+        },{
+            "name":"Dark Choclate",
+            "search-name":"cadbury bournville",
+            "img":"https://ik.imagekit.io/dunzo/tr:w-$w$,h-$h$,cm-pad_resize/1645511123839_product_5ef34ff87b2b3a5f85749c3b_1.jpg"
+        },{
+            "name":"Choclate Spread",
+            "search-name":"nutella hazelnut choclate spread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/458210a.jpg?ts=1668489789"
+        },{
+            "name":"Choclate Peanut Butter",
+            "search-name":"myfitness choclate peanut butter",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/444825a.jpg?ts=1652443853"
+        },{
+            "name":"Choclate Cake",
+            "search-name":"britania choclate cake",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_238052.jpg?ts=1658585944"
+        },{
+            "name":"Peanut Butter",
+            "search-name":"sundrop peanut butter",
+            "img":"https://ik.imagekit.io/dunzo/tr:w-$w$,h-$h$,cm-pad_resize/1645118217361_product_5bd2cefb73cdab71358774f7_1.jpg"
+        }
+    
+    ]
+    const productCategories={
+        "fruits":12,
+        "breadMilk":12,
+        "drinks":11,
+        "chips":10,
+        "oilAtta":7,
+        "vegetables":7,
+        "icecream":6,
+        "beauty":6,
+        "grooming":11,
+        "packedFood":8
+    };
+
+
+    //-----------------------------
+    //FRUITS
+    //-----------------------------
+
+    const showProducts=(products)=>{
+        const container=document.querySelector(".remove-ext");
+        container.replaceChildren();
+
+        for (let i=0;i<products.length;i++){
+            const product=products[i];
+            const productContainer=document.createElement("div");
+            container.appendChild(productContainer);
+
+            const html=`  <div class="popular-dish-box wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                  <div class="popular-dish-thumb">
+                      <a title="" itemprop="url"><img src="${product.img == undefined ? "https://resources.dunzo.com/web-assets/prod/_next/static/images/SkuItemPlaceholder-f84baae1b76ec41168f8921814c21e72.png" : product.img}" alt="popular-dish-img1.jpg" itemprop="image"></a>
+                  </div>
+                  <div class="popular-dish-info card-body p-3">
+                      <h4 itemprop="headline">
+                      <a title="" itemprop="url">${product.name}</a>
+                      </h4>
+                  </div>
+              </div>                                             
+          `
+          productContainer.innerHTML=html;
+          productContainer.addEventListener("click",()=>{
+            const searchProduct=product['search-name'];
+
+            //setting product name to be searched in local storage 
+            localStorage.setItem("productName",searchProduct);
+            localStorage.setItem("productImage",product.img);
+
+
+            //redirecting the page to compare products
+            window.location.href="./productcompare.html   "
+
+            
+
+          })
+
+            
+        }
+
+    }
+
+    //show products of a category on click
+    //click functions
+    $("#fruits").click(()=>{
+        const fruits=products.slice(0,12);
+        showProducts(fruits);
+    });
+   $("#breadMilk").click(()=>{
+    const breadMilkProducts=products.slice(12,24);
+    showProducts(breadMilkProducts);
+   });
+
+   $("#coldrink").click(()=>{
+    const coldrinks=products.slice(24,35);
+    showProducts(coldrinks);
+   })
+
+   $("#chips").click(()=>{
+    const chips=products.slice(35,45);
+    showProducts(chips);
+   })
+   $("#oilAtta").click(()=>{
+    const oilAttaProducts=products.slice(45,52);
+    showProducts(oilAttaProducts);
+   });
+   $("#vegetables").click(()=>{
+    const vegetables=products.slice(52,59);
+    showProducts(vegetables);
+   });
+   $("#icecream").click(()=>{
+    const icecreamProducts=products.slice(59,65);
+    showProducts(icecreamProducts);
+   });
+   $("#beauty").click(()=>{
+    const beautyProducts=products.slice(65,71);
+    showProducts(beautyProducts);
+   })
+   $("#grooming").click(()=>{
+    const groomingProucts=products.slice(71,82);
+    showProducts(groomingProucts);
+   });
+   $("#packedFood").click(()=>{
+    const packedFood=products.slice(82,90);
+    showProducts(packedFood);
+   })
+            
+   
+  //select category selected by user on index page
+
+  console.log(localStorage.getItem("category"));
+  document.querySelector(`#${localStorage.getItem("category")}`).click();      
+           
+</script>
+<!--script for when user searches from navbar then data is sent to index.html page using localStorage & then search begins-->
+<script>
+
+     //search from navbar on this page; getting product name & location
+     const sendData=()=>{
+                const product=document.querySelector("#productName").value;
+                const location=document.querySelector("#search").value;
+
+                //setting this data in localStorage so that it can be retrieved on the index page
+                localStorage.setItem("productSearch",product);
+                localStorage.setItem("locationSearch",location);
+
+                window.location.href="index.html";
+               }
+
+               document.querySelector("#getDataButton").addEventListener("click",sendData)
+</script>
+</body>
+
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Food Ordering HTML Template</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assets/css/icons.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/red-color.css">
+    <link rel="stylesheet" href="./assets/css/yellow-color.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./stylle.css">
+
+    <style>
+        #priceContainer span{
+            margin-left:30%;
+        }
+    </style>
+
+</head>
+
+<body itemscope>
+    <main>
+        <div class="preloader">
+            <div id="cooking">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div id="area">
+                    <div id="sides">
+                        <div id="pan"></div>
+                        <div id="handle"></div>
+                    </div>
+                    <div id="pancake">
+                        <div id="pastry"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <nav id="navbar"></nav>
+            <div class="block">
+                <div class="fixed-bg" style="background-image: url(assets/images/topbg.jpg);"></div>
+                <div class="page-title-wrapper text-center">
+                    <div class="col-md-12 col-sm-12 col-lg-12">
+                        <div class="page-title-inner">
+                            <h1 itemprop="headline">Your Product Comparison here</h1>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="bread-crumbs-wrapper">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html" title="" itemprop="url">Home</a></li>
+                    <li class="breadcrumb-item"><a href="list.html" title="" itemprop="url">Product List</a></li>
+                    <li class="breadcrumb-item"><a href="product-found.html" title="" itemprop="url">Product Found</a></li>
+                    <li class="breadcrumb-item active">Products Compare</li>
+                </ol>
+            </div>
+            <section>
+                <div class="block gray-bg bottom-padd210 top-padd30">
+                    <div class="container">
+                        <div class="row comparing-container">
+
+                            <div class="col-md-6 p-0">
+                                <div class="obj">
+
+                                    <img id="brandImage" src="" alt="">
+                                    <h1 id="brandName"></h1>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6 p-0">
+                                <div class="price" id="priceContainer">
+                                    <div class="flex-container">
+                                        <figure><img src="assets/images/blinkit.svg" alt="" /></figure>
+                                        <span type="button" class="buttonload disabled " id="blinkLoader" style="display:none;"><i class="fa fa-circle-o-notch fa-spin m-r-10"></i></span>
+                                        <h4 id="blinkPrice"></h4>
+                                        <a id="blinkProductLink" href="#"><button>Visit Store</button></a>
+                                    </div>
+                                    <div class="flex-container">
+                                        <figure><img
+                                                src="https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-7b2b540792556466133aea6e7c6ae513.png"
+                                                alt="" /></figure>
+                                                <span type="button" class="buttonload disabled " id="dunzoLoader" style="display : none;"><i class="fa fa-circle-o-notch fa-spin m-r-10"></i></span>
+                                        <h4 id="dunzoPrice"></h4>
+                                        <a href="#" id="dunzoProductLink"><button>Visit Store</button></a>
+                                    </div>
+                                    <div class="flex-container">
+                                <figure ><img src="assets/images/Instamartlogo.webp" alt=""/></figure>   
+                                <span type="button" class="buttonload disabled " id="instaLoader" style="display : none;"><i class="fa fa-circle-o-notch fa-spin m-r-10"></i></span>                         
+                                <h4 id="instaPrice"></h4>
+                                <a href="#" id="instaProductLink"><button>Visit Store </button></a>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+        </div>
+
+
+      
+        <section class="mt-4">
+            <div class="container">
+                <div class="row" id="searchContainer" style="margin-top: 40px;">
+
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="block top-padd80 bottom-padd80 dark-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="footer-data">
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-6 col-lg-6">
+                                        <div class="widget about_widget wow fadeIn" data-wow-delay="0.1s">
+                                            <div class="logo">
+                                                <h1 itemprop="headline"><a href="#" title="Home" itemprop="url"><img
+                                                            src="assets/images/logo.png" alt="logo.png"
+                                                            itemprop="image"></a></h1>
+                                            </div>
+                                            <p itemprop="description">Food Ordering is a Premium HTML Template. Best
+                                                choice for your online store. Let purchase it to enjoy now</p>
+                                            <div class="social2">
+                                                <a class="brd-rd50" href="#" title="Facebook" itemprop="url"
+                                                    target="_blank"><i class="fa fa-facebook"></i></a>
+                                                <a class="brd-rd50" href="#" title="Google Plus" itemprop="url"
+                                                    target="_blank"><i class="fa fa-google-plus"></i></a>
+                                                <a class="brd-rd50" href="#" title="Twitter" itemprop="url"
+                                                    target="_blank"><i class="fa fa-twitter"></i></a>
+                                                <a class="brd-rd50" href="#" title="Pinterest" itemprop="url"
+                                                    target="_blank"><i class="fa fa-pinterest"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                              
+                                    <div class="col-md-4 col-sm-6 col-lg-6">
+                                        <div class="widget get_in_touch wow fadeIn" data-wow-delay="0.4s">
+                                            <h4 class="widget-title" itemprop="headline">GET IN TOUCH</h4>
+                                            <ul>
+                                                <li><i class="fa fa-map-marker"></i> sector 153 Noida</li>
+                                                <li><i class="fa fa-phone"></i> 18001982374</li>
+                                                <li><i class="fa fa-envelope"></i> <a href="#" title=""
+                                                        itemprop="url">Jayyant Panwar</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- Footer Data -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="bottom-bar dark-bg text-center">
+
+            <div class="log-popup text-center">
+                <div class="sign-popup-wrapper brd-rd5">
+                    <div class="sign-popup-inner brd-rd5">
+                        <a class="log-close-btn" href="#" title="" itemprop="url"><i class="fa fa-close"></i></a>
+                        <div class="sign-popup-title text-center">
+                            <h4 itemprop="headline">SIGN IN</h4>
+                            <span>with your social network</span>
+                        </div>
+                        <div class="popup-social text-center">
+                            <a class="facebook brd-rd3" href="#" title="Facebook" itemprop="url" target="_blank"><i
+                                    class="fa fa-facebook"></i> Facebook</a>
+                            <a class="google brd-rd3" href="#" title="Google Plus" itemprop="url" target="_blank"><i
+                                    class="fa fa-google-plus"></i> Google</a>
+                            <a class="twitter brd-rd3" href="#" title="Twitter" itemprop="url" target="_blank"><i
+                                    class="fa fa-twitter"></i> Twitter</a>
+                        </div>
+                        <span class="popup-seprator text-center"><i class="brd-rd50">or</i></span>
+                        <form class="sign-form">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <input class="brd-rd3" type="text" placeholder="Username or Email">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <input class="brd-rd3" type="password" placeholder="Password">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <button class="red-bg brd-rd3" type="submit">SIGN IN</button>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <a class="sign-btn" href="#" title="" itemprop="url">Not a member? Sign up</a>
+                                    <a class="recover-btn" href="#" title="" itemprop="url">Recover my password</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sign-popup text-center">
+                <div class="sign-popup-wrapper brd-rd5">
+                    <div class="sign-popup-inner brd-rd5">
+                        <a class="sign-close-btn" href="#" title="" itemprop="url"><i class="fa fa-close"></i></a>
+                        <div class="sign-popup-title text-center">
+                            <h4 itemprop="headline">SIGN UP</h4>
+                            <span>with your social network</span>
+                        </div>
+                        <div class="popup-social text-center">
+                            <a class="facebook brd-rd3" href="#" title="Facebook" itemprop="url" target="_blank"><i
+                                    class="fa fa-facebook"></i> Facebook</a>
+                            <a class="google brd-rd3" href="#" title="Google Plus" itemprop="url" target="_blank"><i
+                                    class="fa fa-google-plus"></i> Google</a>
+                            <a class="twitter brd-rd3" href="#" title="Twitter" itemprop="url" target="_blank"><i
+                                    class="fa fa-twitter"></i> Twitter</a>
+                        </div>
+                        <span class="popup-seprator text-center"><i class="brd-rd50">or</i></span>
+                        <form class="sign-form">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <input class="brd-rd3" type="text" placeholder="Username">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <input class="brd-rd3" type="email" placeholder="Email">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <input class="brd-rd3" type="password" placeholder="Password">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <button class="red-bg brd-rd3" type="submit">REGISTER NOW</button>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <a class="sign-btn" href="#" title="" itemprop="url">Already Registered? Sign in</a>
+                                    <a class="recover-btn" href="#" title="" itemprop="url">Recover my password</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </main><!-- Main Wrapper -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script type="text/javascript" src="https://slick/slick.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+      <!--Below script to load header file-->
+      <script>$("#navbar").load("header.html");</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArlskABeuY6tOnXnYwrCRhoky3rIRt-E0"></script>
+    <!-- <script> src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArlskABeuY6tOnXnYwrCRhoky3rIRt-E0&libraries=places&callback=initMap"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbBOosq_YIVNCVtgzTDaca8OI_Mlo_y1Y&libraries=places"></script>
+    <!-- <script> src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArlskABeuY6tOnXnYwrCRhoky3rIRt-E0&libraries=places&callback=initMap"></script> -->
+   
+    <script>
+       
+         document.getElementById("clearButton").addEventListener("click", function () {
+             document.getElementById("search").value = "";
+         });
+
+    </script>
+    <script>
+        function initAutocomplete() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: 48,
+                    lng: 4
+                },
+                zoom: 4,
+                disableDefaultUI: true
+            });
+
+            // Create the search box and link it to the UI element.
+            var input = document.getElementById('search');
+            var autocomplete = new google.maps.places.Autocomplete(input);
+            map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
+            var marker = new google.maps.Marker({
+                map: map
+            });
+
+            // Bias the SearchBox results towards current map's viewport.
+            autocomplete.bindTo('bounds', map);
+            // Set the data fields to return when the user selects a place.
+            autocomplete.setFields(
+                ['address_components', 'geometry', 'name']);
+
+            // Listen for the event fired when the user selects a prediction and retrieve
+            // more details for that place.
+            autocomplete.addListener('place_changed', function () {
+                var place = autocomplete.getPlace();
+                if (!place.geometry) {
+                    console.log("Returned place contains no geometry");
+                    return;
+                }
+                var bounds = new google.maps.LatLngBounds();
+                marker.setPosition(place.geometry.location);
+
+                if (place.geometry.viewport) {
+                    // Only geocodes have viewport.
+                    bounds.union(place.geometry.viewport);
+                } else {
+                    bounds.extend(place.geometry.location);
+                }
+                map.fitBounds(bounds);
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function (event) {
+            initAutocomplete();
+        });
+    </script>
+    <!-- <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbBOosq_YIVNCVtgzTDaca8OI_Mlo_y1Y&libraries=places&callback=initMap"></script> -->
+    <script>
+        function dataManage(res) {
+            $("#search").val(res)
+        };
+    </script>
+
+    <script>
+        getLocation()
+        var x = document.getElementById("search");
+        let latitude = "";
+        let longitude = "";
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
+
+            getAddressByLtLng(latitude, longitude)
+        }
+        function getAddressByLtLng(lat, lng) {
+            geocoder = new google.maps.Geocoder();
+            geocoder.geocode({
+                location: {
+                    lat: parseFloat(lat),
+                    lng: parseFloat(lng),
+                }
+
+            }).then((res) => {
+                console.log(res)
+
+                $("#search").val(res.results[0].formatted_address)
+
+
+            }).catch((error) => {
+                console.log(error)
+                // $("#rectangle").show
+            })
+        }
+      
+    </script>
+    <script>
+       
+        document.getElementById("clearButton").addEventListener("click", function () {
+            document.getElementById("search").value = "";
+           
+        });
+
+    </script>
+    <script>
+
+        let product;
+        let productImage;
+
+        //boolean to check if product data of all the brands present or is required to be fetched from backend
+        let isDataPresent;
+        console.log(document.referrer)
+        if(document.referrer==="http://localhost:8080/" || document.referrer==="http://localhost:8080/index.html"){
+            isDataPresent=true;
+            const dunzoProduct=JSON.parse(localStorage.getItem("dunzoProduct"));
+            const instaProduct=JSON.parse(localStorage.getItem("instaProduct"));
+            const blinkProduct=JSON.parse(localStorage.getItem("blinkProduct"));
+
+           
+
+            //populating data on the div
+            document.querySelector("#dunzoPrice").textContent= dunzoProduct.product.price +" "+`(${dunzoProduct.product.quantity})` + " "+`${dunzoProduct.isSimilar ? '(Similar Product)' : ''}`;
+            document.querySelector("#blinkPrice").textContent= blinkProduct.product.price +" "+`(${blinkProduct.product.quantity})` + " "+`${blinkProduct.isSimilar ? '(Similar Product)' : ''}`;
+            document.querySelector("#instaPrice").textContent= instaProduct.product.price +" "+`(${instaProduct.product.quantity})` + " "+`${instaProduct.isSimilar ? '(Similar Product)' : ''}`;
+
+            if(dunzoProduct.isReferrer){
+                product=dunzoProduct.product.name;
+                productImage=dunzoProduct.product.image;
+            }else if(blinkProduct.isReferrer){
+                product=blinkProduct.product.name;
+                productImage=blinkProduct.product.image
+            }else{
+                product=instaProduct.product.name;
+                productImage=instaProduct.product.image;
+            }
+        }if(document.referrer==="http://localhost:8080/list.html"){
+            isDataPresent=false;
+            document.querySelector("#dunzoPrice").textContent=""
+            document.querySelector("#blinkPrice").textContent= ""
+            document.querySelector("#instaPrice").textContent= ""
+            product=localStorage.getItem("productName");
+            productImage=localStorage.getItem("productImage");
+        }
+        
+         
+
+         //displaying brand image & brand Name
+         document.querySelector("#brandImage").src=productImage;
+         document.querySelector("#brandName").textContent=product;
+
+         //get data from all the 3 websites when the page is loaded
+
+         
+        //getting data one at a time
+        const getDataDunzo=async()=>{
+
+            try{
+
+              
+                //getting from dunzo
+                const res=await fetch(`http://localhost:3000/getDunzo?location=Delhi,India&&product=${product}`,{
+                method:"GET",
+                headers:{
+                    "Content-Type": "application/json"
+                },
+
+            })
+
+             //hiding loader
+             $("#dunzoLoader").hide();
+
+            const data=await res.json();
+
+            //getting price and quantity
+            const price=data.data.dunzoData[0].price;
+            const quantity=data.data.dunzoData[0].quantity;
+
+
+            if(!price || !quantity){
+                        document.querySelector("#dunzokPrice").textContent="could not fetch right now";
+                }
+
+            //displaying price and quantity
+            document.querySelector("#dunzoPrice").textContent= price +" "+`(${quantity})`;
+
+        }catch(err){
+                console.log("error occurred while fetching from dunzo!!")
+                console.log(err)
+            }
+
+    }
+
+        const getDataInsta=async()=>{
+
+            try{
+
+               
+            
+                //getting from instamart
+                const res=await fetch(`http://localhost:3000/getInsta?location=Delhi,India&&product=${product}`,{
+                    method:"GET",
+                    headers:{
+                        "Content-Type":"application/json"
+                    }
+
+        
+                })
+
+
+                 //hiding loader
+                 $("#instaLoader").hide();
+
+                const data=await res.json();
+
+                //getting price & quant of the product
+                const price=data.data.instaData[0].price;
+                const quantity=data.data.instaData[0].quantity;
+
+
+               
+
+                
+                if(!price || !quantity){
+                        document.querySelector("#instaPrice").textContent="could not fetch right now";
+                    }
+
+                //displaying the price and quantity
+               
+                document.querySelector("#instaPrice").textContent=  price +" "+`(${quantity})`;
+                document.querySelector("#instaProductLink").setAttribute("href",`https://www.swiggy.com/instamart/search?custom_back=true&query=${document.querySelector("#brandName").textContent}`)
+              
+
+            }catch(err){
+                console.log("an error occurred while fetching from Instamart")
+                console.log(err)
+            }
+        }
+
+
+        const getDataBlink=async()=>{
+
+           
+            try{
+
+                    
+
+                    const res=await fetch(`http://localhost:3000/getBlink?location=Delhi,India&&product=${product}`,{
+                        method:"GET",
+                        headers:{
+                            "Content-Type":"application/json"
+                        }
+                    })
+
+
+                    //hiding loader
+                    $("#blinkLoader").hide();  
+
+
+                    const data=await res.json();
+                    
+                    //getting price and quant
+                    const price=data.data.blinkData[0].price;
+                    const quantity=data.data.blinkData[0].quantity;
+
+
+
+                          
+                    
+                    
+                    if(!price || !quantity){
+                        document.querySelector("#blinkPrice").textContent="could not fetch right now";
+                    }
+                    
+                    //displaying price & quantity
+                    document.querySelector("#blinkPrice").textContent=price +" "+`(${quantity})`;
+                    document.querySelector("#blinkProductLink").setAttribute("href",`https://blinkit.com/s/?q=${document.querySelector("#brandName").textContent}`);
+                   
+
+            }catch(err){
+                    console.log("an error occured while fetching from blinkit")
+                    console.log(err)
+            }
+        }
+
+
+
+        //method below to fetch data when the page loads if data not present
+         //getting data
+         if(!isDataPresent){
+
+             //showing loader
+             $("#blinkLoader").show();
+             $("#dunzoLoader").show();
+             $("#instaLoader").show();
+
+            //getting data from backend
+            (async()=>{
+                await Promise.any([getDataBlink(),getDataDunzo(),getDataInsta()])
+            })()
+               
+               
+         }
+
+
+
+        function initAutocomplete() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: 48,
+                    lng: 4
+                },
+                zoom: 4,
+                disableDefaultUI: true
+            });
+
+            // Create the search box and link it to the UI element.
+            var input = document.getElementById('search');
+            var autocomplete = new google.maps.places.Autocomplete(input);
+            map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
+            var marker = new google.maps.Marker({
+                map: map
+            });
+
+            // Bias the SearchBox results towards current map's viewport.
+            autocomplete.bindTo('bounds', map);
+            // Set the data fields to return when the user selects a place.
+            autocomplete.setFields(
+                ['address_components', 'geometry', 'name']);
+
+            // Listen for the event fired when the user selects a prediction and retrieve
+            // more details for that place.
+            autocomplete.addListener('place_changed', function () {
+                var place = autocomplete.getPlace();
+                if (!place.geometry) {
+                    console.log("Returned place contains no geometry");
+                    return;
+                }
+                var bounds = new google.maps.LatLngBounds();
+                marker.setPosition(place.geometry.location);
+
+                if (place.geometry.viewport) {
+                    // Only geocodes have viewport.
+                    bounds.union(place.geometry.viewport);
+                } else {
+                    bounds.extend(place.geometry.location);
+                }
+                map.fitBounds(bounds);
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function (event) {
+            initAutocomplete();
+        });
+    </script>
+   
+    <!--script for when user searches from navbar then data is sent to index.html page using localStorage & then search begins-->
+    <script>
+
+        //search from navbar on this page; getting product name & location
+        const sendData=()=>{
+                const product=document.querySelector("#productName").value;
+                const location=document.querySelector("#search").value;
+
+                //setting this data in localStorage so that it can be retrieved on the index page
+                localStorage.setItem("productSearch",product);
+                localStorage.setItem("locationSearch",location);
+
+                window.location.href="index.html";
+                }
+
+                document.querySelector("#getDataButton").addEventListener("click",sendData)
+    </script>
+</body>
+
+</html>

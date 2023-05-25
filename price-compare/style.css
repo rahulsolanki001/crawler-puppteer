@@ -1,0 +1,165 @@
+#product-details .proComparisionContainer {
+  width: 100%;
+}
+
+#product-details .proComparisionContainer .comparisionTable {
+  font-size: 14px;
+  margin: 0 !important;
+  width: 100%;
+  border-right: 1px solid #ececec;
+}
+
+#product-details .proComparisionContainer .comparisionTable td,
+#product-details .proComparisionContainer .comparisionTable th {
+  min-width: 199px;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+
+  #product-details .proComparisionContainer .comparisionTable td,
+  #product-details .proComparisionContainer .comparisionTable th {
+    min-width: 165px;
+  }
+}
+
+#product-details .proComparisionContainer .comparisionTable .no-bdr {
+  border: none !important;
+}
+
+#product-details .proComparisionContainer .comparisionTable .pro-img {
+  vertical-align: bottom;
+}
+
+#product-details .proComparisionContainer .comparisionTable th div {
+  color: #231f20;
+  padding: 10px 0px;
+}
+
+#product-details .proComparisionContainer .comparisionTable thead tr th:last-child {
+  border-right: 2px solid #ffffff !important;
+}
+
+#product-details .proComparisionContainer .comparisionTable tbody tr:last-child td:last-of-type {
+  border-right: 2px solid #ffffff !important;
+}
+
+#product-details .proComparisionContainer .comparisionTable tbody tr th:first-child {
+  min-width: 300px;
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  #product-details .proComparisionContainer .comparisionTable tbody tr th:first-child {
+    min-width: 165px;
+  }
+}
+
+#product-details .proComparisionContainer .comparisionTable tbody tr td.proSelectBtn {
+  position: relative;
+  border: none;
+}
+
+#product-details .proComparisionContainer .comparisionTable tbody tr td.proSelectBtn a {
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 1px solid #6fa21a;
+  display: inline-block;
+  padding: 9px 27px;
+  border-radius: 5px;
+  color: #6fa21a;
+  margin: 15px 5px 5px 5px;
+}
+
+#product-details .proComparisionContainer .comparisionTable tbody tr td.proSelectBtn a:hover {
+  background-color: #6fa21a;
+  color: #ffffff;
+}
+
+#product-details .proComparisionContainer .comparisionTable tbody tr td.terminalImg img {
+  max-width: 100px;
+}
+
+#product-details .proComparisionContainer .comparisionTable .proHeading {
+  background-color: #f9f9f9;
+  font-size: 14px;
+  color: #5a5a5a;
+  font-weight: normal;
+}
+
+#product-details .proComparisionContainer .proComparisionBtn {
+  display: none;
+  position: relative;
+}
+
+#product-details .proComparisionContainer .proComparisionBtn span {
+  width: 25px;
+  height: 25px;
+  background: #6fa219;
+  display: inline-block;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  position: absolute;
+  top: 120px;
+  z-index: 100;
+}
+
+#product-details .proComparisionContainer .proComparisionBtn span#left_scroll_tbl {
+  left: 250px;
+}
+
+@media (max-width: 991px) {
+  #product-details .proComparisionContainer .proComparisionBtn span#left_scroll_tbl {
+    left: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  #product-details .proComparisionContainer .proComparisionBtn span#left_scroll_tbl {
+    left: 10px;
+  }
+}
+
+#product-details .proComparisionContainer .proComparisionBtn span#right_scroll_tbl {
+  right: -40px;
+}
+
+@media (max-width: 991px) {
+  #product-details .proComparisionContainer .proComparisionBtn span#right_scroll_tbl {
+    right: auto;
+    left: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  #product-details .proComparisionContainer .proComparisionBtn span#right_scroll_tbl {
+    left: 135px;
+  }
+}
+
+#product-details .proComparisionContainer .proComparisionBtn span i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  margin-top: -0.5px;
+}
+
+#product-details .proComparisionTable::-webkit-scrollbar {
+  display: none;
+}
+
+#product-details .proComparisionTable {
+  -ms-overflow-style: none;
+}

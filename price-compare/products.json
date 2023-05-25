@@ -1,0 +1,381 @@
+{
+    "products":[
+        {
+            "name":"Mango",
+            "search-name":"Alphonso Mango",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/363834a.jpg?ts=1681295572"
+        },{
+            "name":"Watermelon",
+            "search-name":"kiran watermelon",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/369752a.jpg?ts=1658731562"
+        },{
+            "name":"grapes",
+            "search-name":"green grapes",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/347025a.jpg?ts=1652855625"
+        },{
+            "name":"Oranges",
+            "search-name":"nagpur orange",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/197975a.jpg?ts=1681040168"
+        },{
+            "name":"Apple",
+            "search-name":"shimla apple",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/428612a.jpg?ts=1658731563"
+        },{
+            "name":"Coconut",
+            "search-name":"brown coconut",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/4943a.jpg?ts=1664284085"
+        },{
+            "name":"ananas",
+            "search-name":"pineapple",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/190320a.jpg?ts=1639563832"
+        },{
+            "name":"Guava",
+            "search-name":"thai guava",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/458760a.jpg?ts=1637671022"
+        },{
+            "name":"kiwi",
+            "search-name":"zespri green kiwi",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/337437a.jpg?ts=1662109239"
+        },{
+            "name":"dates",
+            "search-name":"kimia dates",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/53888a.jpg"
+        },{
+            "name":"banana",
+            "search-name":"baby banana",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/342340a.jpg?ts=1679464054"
+        },{
+            "name":"jamun",
+            "search-name":"java plum kala",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/458953a.jpg"
+        },{
+            "name":"White Bread",
+            "search-name":"harvest gold white bread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/448095a.jpg?ts=1661157752"
+        },{
+            "name":"Brown Bread",
+            "search-name":"harvest gold brown bread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/24194a.jpg?ts=1661157751"
+        },{
+            "name":" Whole Wheat Bread",
+            "search-name":"english oven whole wheat bread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/383411a.jpg?ts=1675775414"
+        },{
+            "name":"Atta Bread",
+            "search-name":"harvest gold atta bread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/448096a.jpg?ts=1661157752"
+        },{
+            "name":"Multigrain Bread",
+            "search":"britania multigrain bread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/111463a.jpg?ts=1654679437"
+        },{
+            "name":"Bun",
+            "search-name":"english oven pav",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/18402a.jpg?ts=1657259224"
+        },{
+
+            "name":"Kulcha",
+            "search-name":"britania kulcha",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/335820a.jpg?ts=1613137900"
+        },{
+            "name":"Toned Milk",
+            "search-name":"amul toned milk",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/19512a.jpg?ts=1647923044"
+        },{
+            "name":"Full Cream Milk",
+            "search-name":"mother dairy full cream milk",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/19924a.jpg?ts=1644476636"
+        },{
+            "name":"Cow Fresh Milk",
+            "search-name":"mother dairy cow fresh milk",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/339309a.jpg"
+        },{
+            "name":"Lactose Free Milk",
+            "search-name":"amul lactose free milk",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/206314a.jpg?ts=1589186576"
+        },{
+            "name":"Soy Milk",
+            "search-name":"sofit soy milk",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/422749a.jpg?ts=1679550340"
+        },  {
+            "name":"cold drink",
+            "search-name":"coca-cola",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/283a.jpg?ts=1657699524"
+        },{
+            "name":"Non Alcoholic Beer",
+            "search-name":"Coolberg Cranberry non-alcoholic beer",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/456321a.jpg?ts=1627393208"
+        },{
+            "name":"Masala Soda Drink",
+            "search-name":"lahori zeera masala soda",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/497383a.jpg"
+        },{
+            "name":"Mango Drink",
+            "search-name":"Slice drink",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/32790a.jpg?ts=1588938067"
+        },{
+            "name":"Mixed Fruit Juice",
+            "search-name":"real mixed fruit",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_215472.jpg?ts=1653393770"
+        },{
+            "name":"Apple Juice",
+            "search-name":"appy apple juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/500869a.jpg"
+        },{
+            "name":"Cranberry Juice",
+            "search-name":"tropicana cranberry juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/45363a.jpg"
+        },{
+            "name":"orange juice",
+            "search-name":"b natural orange juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/33218a.jpg?ts=1680528255"
+        },{
+            "name":"Mosambi Juice",
+            "search-name":"real mosambi juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/62221a.jpg?ts=1650622549"
+        },{
+            "name":"Guava Juice",
+            "search-name":"fresca guava juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_483973.jpg?ts=1653900370"
+        },{
+            "name":"Litchi Juice",
+            "search-name":"fresca litchi juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/480578a.jpg?ts=1663053108"
+        }, {
+            "name":"Lays",
+            "search-name":"lays magic masala",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/240092a.jpg?ts=1668146939"
+        },
+        {
+            "name":"Kurkure",
+            "search-name":"kurkure masala munch",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_271303.jpg"
+        },{
+            "name":"Uncle Chips",
+            "search-name":"uncle chipps spicy treat flavour",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_395336.jpg?ts=1668152050"
+        },{
+            "name":"pringles",
+            "search-name":"pringles sour and cream",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/33863a.jpg?ts=1675842248"
+        },{
+            "name":"Bingo",
+            "search-name":"bingo mad angles tomato madness",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_401231.jpg?ts=1653897640"
+        },{
+            "name":"Naachos",
+            "search-name":"doritos cheese nacchos",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/432818a.jpg?ts=1669469997"
+        },{
+            "name":"Aloo Bhujia",
+            "search-name":"haldiram aloo bhujia",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/380252a.jpg?ts=1672286803"
+        },{
+            "name":"Kaju Mixture Namkeen",
+            "search-name":"haldiram kaju mixture namkeen",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/11187a.jpg"
+        },{
+            "name":"Salted Peanuts",
+            "search-name":"haldiram classic salted peanuts",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_481985.jpg?ts=1653898886"
+        },{
+            "name":"Nut Cracker",
+            "search-name":"haldiram nut cracker",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_481989.jpg?ts=1661324838"
+        }, {
+            "name":"Whole Wheat Atta",
+            "search-name":"Aashirwaad whole wheat aata",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/333324a.jpg?ts=1680539705"
+        },{
+            "name":"Multigrain Atta",
+            "search-name":"pilsbury multigrain atta",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/3867a.jpg?ts=1628503612"
+        },{
+            "name":"Soyabean Oil",
+            "search-name":"fortune refined soyabean oil",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/52a.jpg?ts=1624964816"
+        },{
+            "name":"Mustard Oil",
+            "search-name":"pansari kachi ghani mustard oil",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/103115a.jpg?ts=1668168909"
+        },{
+            "name":"Rice Bran Oil",
+            "search-name":"fortune rice bran oil",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/14624a.jpg?ts=1624885138"
+        },{
+            "name":"Sunflower Oil",
+            "search-name":"fortune sunflower oil",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/400963a.jpg?ts=1583125763"
+        },{
+            "name":"Olive Oil",
+            "search-name":"figaro extra virgin olive oil",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/9349a.jpg?ts=1636526081"
+        }, {
+            "name":"Ful Ghobi",
+            "search-name":"Cauliflower",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467646a.jpg?ts=1651220576"
+        },{
+            "name":"Chukandar",
+            "search-name":"beetroot",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467637a.jpg?ts=1673944535"
+        },{
+            "name":"Onion",
+            "search-name":"organic pyaz",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467655a.jpg?ts=1673945238"
+        },{
+            "name":"lawkey",
+            "search-name":"bottle gourd",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467639a.jpg?ts=1666864261"
+        },{
+            "name":"Shimla Mirch",
+            "search-name":"green capsicum",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/340626a.jpg?ts=1667470862"
+        },{
+            "name":"Adhrak",
+            "search-name":"ginger",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467652a.jpg?ts=1673945214"
+        },{
+            "name":"Lehsun",
+            "search-name":"garlic",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467651a.jpg?ts=1673945199"
+        }, {
+            "name":"Choclate Ice Cream",
+            "search-name":"vadilal gourmet choclate ice cream",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/482628a.jpg?ts=1679484378"
+        },{
+            "name":"Vanilla Ice Cream",
+            "search-name":"amul vanilla ice cream",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/438914a.jpg?ts=1672030442"
+        },{
+            "name":"Mango Ice Cream",
+            "search-name":"creampot mango frozen dessert",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/483745a.jpg"
+        },{
+            "name":"Butterscotch Ice Cream",
+            "search-name":"Vadilal gourmet butterscotch ice cream",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/482621a.jpg?ts=1672381958"
+        },{
+            "name":"Cone Ice Cream",
+            "search-name":"kwality walls cornetto",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/450546a.jpg?ts=1661421808"
+        },{
+            "name":"Ice Cream Stick",
+            "search-name":"kwality walls magnum",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/450560a.jpg?ts=1661421808"
+        },   {
+            "name":"Lipstick",
+            "search-name":"lakme forever lipstick",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/495629a.jpg?ts=1674471371"
+        },{
+            "name":"Compact Powder",
+            "search-name":"maybelline new york compact powder",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/477224a.jpg?ts=1675428534"
+        },{
+            "name":"Hair Mask",
+            "search-name":"pilgrim argan oil hair mask",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/492983a.jpg?ts=1680779417"
+        },
+        {
+            "name":"Body Lotion",
+            "search-name":"nivia body lotion",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/443265a.jpg?ts=1678868037"
+        },{
+            "name":"Eyeliner",
+            "search-name":"maybelline new york eyeliner",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/477220a.jpg?ts=1675428420"
+        },{
+            "name":"Kajal",
+            "search-name":"lakme iconic black kajal",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/36800a.jpg?ts=1641194858"
+        },  {
+            "name":"Toothpaste",
+            "search-name":"pepsodent toothpaste",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/974a.jpg?ts=1643120589"
+        },{
+            "name":"Toothbrush",
+            "search-name":"oralb toothbrush",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/401914a.jpg?ts=1674651733"
+        },{
+            "name":"Electric Toothbrush",
+            "search-name":"colgate electric toothbrush",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/490669a.jpg"
+        },{
+            "name":"Charcoal Face Wash",
+            "search-name":"nivea charcoal facewash",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/23960a.jpg?ts=1591260811"
+        },{
+            "name":"Herbal Face Wash",
+            "search-name":"lotus herbal facewash",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/493739a.jpg"
+        },{
+            "name":"Sunscreen",
+            "search-name":"lakme sunscreen",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/416407a.jpg?ts=1680785290"
+        },{
+            "name":"Bathing Soap",
+            "search-name":"dettol bathing soap",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/270248a.jpg?ts=1672317444"
+        },{
+            "name":"Deodrant Soap",
+            "search-name":"wildstone deodrant soap",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/496985a.jpg"
+        },{
+            "name":"Moisturizing Cream",
+            "search-name":"nivea mosturizing cream",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/19962a.jpg?ts=1647003456"
+        },{
+            "name":"Anti Dandruff Shampoo",
+            "search-name":"head and shoulders shampoo",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/91025a.jpg?ts=1669187623"
+        },{
+            "name":"Hair Conditioner",
+            "search-name":"dove hair conditioner",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/19640a.jpg?ts=1679465777"
+        },{
+            "name":"Candy",
+            "search-name":"alpenliebe eclairs candy",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/425350a.jpg?ts=1680680832"
+        },{
+            "name":"Choclate",
+            "search-name":"cadbury dairy milk choclate",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_378161.jpg?ts=1674802461"
+        },{
+            "name":"Coconut Chocolate",
+            "search-name":"bounty choclate coconut",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/498788a.jpg?ts=1676286750"
+        },{
+            "name":"Dark Choclate",
+            "search-name":"cadbury bournville",
+            "img":"https://ik.imagekit.io/dunzo/tr:w-$w$,h-$h$,cm-pad_resize/1645511123839_product_5ef34ff87b2b3a5f85749c3b_1.jpg"
+        },{
+            "name":"Choclate Spread",
+            "search-name":"nutella hazelnut choclate spread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/458210a.jpg?ts=1668489789"
+        },{
+            "name":"Choclate Peanut Butter",
+            "search-name":"myfitness choclate peanut butter",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/444825a.jpg?ts=1652443853"
+        },{
+            "name":"Choclate Cake",
+            "search-name":"britania choclate cake",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_238052.jpg?ts=1658585944"
+        },{
+            "name":"Peanut Butter",
+            "search-name":"sundrop peanut butter",
+            "img":"https://ik.imagekit.io/dunzo/tr:w-$w$,h-$h$,cm-pad_resize/1645118217361_product_5bd2cefb73cdab71358774f7_1.jpg"
+        }
+    
+    ],
+    "productCategories":{
+        "fruits":12,
+        "breadMilk":12,
+        "drinks":11,
+        "chips":10,
+        "oilAtta":7,
+        "vegetables":7,
+        "icecream":6,
+        "beauty":6,
+        "grooming":11,
+        "packedFood":8
+    }
+}

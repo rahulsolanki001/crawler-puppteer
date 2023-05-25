@@ -1,0 +1,2063 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Food Ordering HTML Template</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/icons.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/red-color.css">
+    <link rel="stylesheet" href="assets/css/yellow-color.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="stylle.css">
+    <style>
+        .loader-container {
+            display: none;
+            text-align: center;
+        }
+
+        .card-container {
+        width: 20% !important;
+        height: 370px;
+        margin: 5%;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 10px;
+      }
+      .card-upper-container {
+        display: flex;
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        background-color: #beb9b9;
+        background-image: linear-gradient(
+          90deg,
+          #f0f0f0 0px,
+          rgba(229, 229, 229, 0.8) 40px,
+          #f4f4f4 80px
+        );
+        background-size: 600px;
+        animation: shine-lines 2s infinite ease-out;
+      }
+      .card-lower-container {
+        margin: 40px 0;
+        display: flex;
+        width: 100%;
+        height: 100px;
+        border-radius: 10px;
+        background-color: #beb9b9;
+        background-image: linear-gradient(
+          90deg,
+          #f0f0f0 0px,
+          rgba(229, 229, 229, 0.8) 40px,
+          #f4f4f4 80px
+        );
+        background-size: 600px;
+        animation: shine-lines 2s infinite ease-out;
+      }
+      
+      
+      @keyframes shine-lines {
+        0% {
+          background-position: -100px;
+        }
+        40%,
+        100% {
+          background-position: 320px;
+        }
+      }
+
+        .lds-dual-ring {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+        }
+
+        .lds-dual-ring:after {
+            content: " ";
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6px solid #e03335;
+            border-color: #e03335 #0000004a #e03335 #0000004a;
+            animation: lds-dual-ring 1.2s linear infinite;
+        }
+
+        @keyframes lds-dual-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .Blinkit_readMoreData,
+        .Dunzo_readMoreData,
+        .instamart_readMoreData {
+            display: none;
+        }
+
+        .load-button{
+            height:3em
+        }
+    </style>
+    <style>
+     
+
+        input,
+        .suggestions {
+            width: 100%;
+        }
+
+        input {
+            background: rgba(255, 255, 255, 0.2);
+            height: 60px;
+            padding: 0 10px;
+        }
+
+        .suggestions {
+            position: absolute;
+            top: 52px;
+            z-index: 5;
+        }
+
+        ul {
+            display: none;
+            list-style-type: none;
+            text-align: start;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+            max-height: 200px;
+            overflow-y: auto;
+            /* padding-left: 20px; */
+            background: #d6d6d6;
+        }
+
+        ul.has-suggestions {
+            display: block;
+        }
+
+        ul li {
+            padding: 10px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        ul li:hover {
+            background-color: #d0d0d0;
+            padding-left: 20px;
+        }
+
+        /* input {
+            border-bottom: 2px solid #e65c00;
+        } */
+
+        #brand-container{
+            display: none;
+            width: 100vw;
+        }
+
+        .item-container{
+            width: 90vw;
+           
+        }
+
+        .item-container h1{
+            color:maroon
+        }
+
+        .item-container > div:nth-child(1){
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .item-container > div >div{
+            width: 30%;
+        }
+
+        .item-container img{
+            width: 30%;
+            object-fit: contain;
+            margin-left: 5em;
+        }
+
+
+        
+    </style>
+</head>
+
+<body itemscope>
+    <main>
+        <div class="preloader">
+            <div id="cooking">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div id="area">
+                    <div id="sides">
+                        <div id="pan"></div>
+                        <div id="handle"></div>
+                    </div>
+                    <div id="pancake">
+                        <div id="pastry"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+       
+        <nav id="navbar"></nav>
+        <section class="mt-4">
+            <div class="container">
+                <div class="row" id="searchContainer" style="margin-top: 40px;">
+                </div>
+                <div class="loader-container">
+                    <div class="lds-dual-ring"></div>
+                    <h4>Please wait...</h4>
+                </div>
+
+                <div id="brand-container">
+                    <div>
+                        <h1>Blinkit</h1>
+                        <div class="item-container" id="blink-container">
+                            <div class="cards-container" id="blinkCards-container"></div>
+                        </div>
+                        <div>
+                            <button id="getBlinkButton">Reload data from Blinkit</button>
+                        </div>
+                    </div>
+                    <div>
+                        <h1>Dunzo</h1>
+                        <div class="item-container" id="dunzo-container" >
+                            <div class="cards-container" id="dunzoCards-container"></div>
+                        </div>
+                        <div>
+                            <button id="getDunzoButton">Reload data from dunzo</button>
+                        </div>
+                        
+                        
+                    </div>
+                    <div >
+                        <h1>Instamart</h1>
+                        <div class="item-container" id="insta-container">
+                            <div class="cards-container" id="instaCards-container"></div>
+                        </div>
+                        <div>
+                            <button id="getInstaButton"> Reload data from Instamart</button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <div class="banner">
+            <section>
+                <div class="block">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <div class="title1-wrapper text-center">
+                                    <div class="title1-inner">
+                                        <!-- <span>Website for BEST PRICES</span> -->
+                                        <h2 itemprop="headline">compare</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resturent-services remove-ext">
+                                <div class="col-md-2 col-sm-6">
+                                    <a href="list.html">
+
+                                        <div class="servise-box wow fadeIn" data-wow-delay="0.2s" id="fruits">
+                                            <figure>
+                                                <img src="Frame 8.jpg" alt="">
+                                            </figure>
+                                            <p>Fruits</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-2 col-sm-6">
+                                    <a href="list.html">
+
+                                        <div class="servise-box wow fadeIn" data-wow-delay="0.3s" id="breadMilk">
+                                            <figure>
+                                                <img src="Frame 9.jpg" alt="">
+                                            </figure>
+                                            <p class="pro">Bread & Milk</p>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-2 col-sm-6">
+                                    <a href="list.html">
+
+                                        <div class="servise-box wow fadeIn" data-wow-delay="0.4s" id="coldrink">
+                                            <figure>
+                                                <img src="Frame 10.jpg" alt="">
+                                            </figure>
+                                            <p class="pro">Coldrinks</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-2 col-sm-6">
+                                    <a href="list.html">
+                                        <div class="servise-box wow fadeIn" data-wow-delay="0.5s" id="chips">
+                                            <figure>
+                                                <img src="Frame 12.jpg" alt="">
+
+                                            </figure>
+                                            <p class="pro">Chips</p>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-2 col-sm-6">
+                                    <a href="list.html">
+
+                                        <div class="servise-box wow fadeIn" data-wow-delay="0.6s" id="oilAtta">
+                                            <figure>
+                                                <img src="Frame 13.jpg" alt="">
+                                            </figure>
+                                            <p class="pro">Oil & Atta</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-2 col-sm-6">
+                                    <a href="list.html">
+
+                                        <div class="servise-box wow fadeIn" data-wow-delay="0.7s" id="vegetables">
+                                            <figure>
+                                                <img src="Frame 14.jpg" alt="">
+                                            </figure>
+                                            <p class="pro">Cleaners</p>
+
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>  
+                            </div>
+            </section>
+
+            <section>
+                <div class="block remove-bottom blackish low-opacity margin-bottom">
+                    <div class="fixed-bg" style="background-image: url(assets/images/parallax3.jpg);"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <div class="title1-wrapper text-center text-white">
+                                    <div class="title1-inner">
+                                        <h2 itemprop="headline">Popular PLACES</h2>
+                                    </div>
+                                </div>
+                                <div class="localities-wrapper">
+                                    <div class="localities-inner brd-rd2 wow fadeIn" data-wow-delay="0.2s">
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-6 col-lg-4">
+                                                <ul class="locat-list" id="local-list">
+
+                                                    <li onclick="dataManage('Burari')"><a href="#search">Burari</a></li>
+                                                    <li onclick="dataManage('Chandni Chowk')"><a href="#search">Chandni
+                                                            Chowk</a></li>
+                                                    <li onclick="dataManage('Chawri Bazar')"><a href="#search">Chawri
+                                                            Bazar</a></li>
+                                                    <li onclick="dataManage('Civil Lines')"><a href="#search">Civil
+                                                            Lines</a></li>
+                                                    <li onclick="dataManage('Dareeba')"><a href="#search">Dareeba</a>
+                                                    </li>
+                                                    <li onclick="dataManage('Delhi Sadar Bazar')"><a
+                                                            href="#search">Delhi Sadar Bazar</a></li>
+                                                    <li onclick="dataManage('Delhi University')"><a href="#search">Delhi
+                                                            University</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6 col-lg-4">
+                                                <ul class="locat-list" id="local-list">
+                                                    <li onclick="dataManage('District Court')"><a
+                                                            href="#search">District Court</a></li>
+                                                    <li onclick="dataManage('Gulabi Bagh')"><a href="#search">Gulabi
+                                                            Bagh</a></li>
+                                                    <li onclick="dataManage('Jagat Pur')"><a href="#search">Jagat
+                                                            Pur</a></li>
+                                                    <li onclick="dataManage('Shakti Nagar')"><a href="#search">Shakti
+                                                            Nagar</a></li>
+                                                    <li onclick="dataManage('Roop Nagar')"><a href="#search">Roop
+                                                            Nagar</a></li>
+                                                    <li onclick="dataManage('Delhi')"><a href="#search">Delhi</a></li>
+                                                    <li onclick="dataManage('New Delhi')"><a href="#search">New
+                                                            Delhi</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6 col-lg-4">
+                                                <ul class="locat-list" id="local-list">
+                                                    <li onclick="dataManage('East Delhi')"><a href="#search">East
+                                                            Delhi</a></li>
+                                                    <li onclick="dataManage('South Delhi')"><a href="#search">South
+                                                            Delhi</a></li>
+                                                    <li onclick="dataManage('Sangam Vihar')"><a href="#search">Sangam
+                                                            Vihar</a></li>
+                                                    <li onclick="dataManage('Ashok Nagar')"><a href="#search">Ashok
+                                                            Nagar</a></li>
+                                                    <li onclick="dataManage('Janakpur')"><a href="#search">JanakPuri</a>
+                                                    </li>
+                                                    <li onclick="dataManage('Ashoka Park')"><a href="#search">Ashoka
+                                                            Park</a></li>
+                                                    <li onclick="dataManage('Paschim Vihar')"><a href="#search">Paschim
+                                                            Vihar</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="block gray-bg2 top-padd210">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <div class="filters-wrapper">
+                                    <div class="title1-wrapper text-center">
+                                        <div class="title1-inner">
+                                            <span>Your Favourite PRODUCTS</span>
+                                            <h2 itemprop="headline">featured products</h2>
+                                        </div>
+                                    </div>
+
+                                    <ul class="filter-buttons center">
+                                        <li class="active"><a class="brd-rd30" data-filter="*" href="#"
+                                                itemprop="url">All</a></li>
+                                        <li><a class="brd-rd30" data-filter=".filter-item1" href="#"
+                                                itemprop="url">Beverages</a></li>
+                                        <li><a class="brd-rd30" data-filter=".filter-item2" href="#" itemprop="url">Home
+                                                Essentials</a></li>
+                                        <li><a class="brd-rd30" data-filter=".filter-item3" href="#"
+                                                itemprop="url">Grocery</a></li>
+                                    </ul><!-- Filter Buttons -->
+                                    <div class="filters-inner style2">
+                                        <div class="row">
+                                            <div class="masonry">
+                                                <div class="col-md-2 col-sm-12 col-lg-2 filter-item filter-item1">
+                                                    <div class="featured-restaurant-box wow fadeIn"
+                                                        data-wow-delay="0.1s">
+                                                        <div class="featured-restaurant-thumb">
+                                                            <a href="food-detail.html" title="" itemprop="url"><img
+                                                                    class="brd-rd50" src="product4.jpg"
+                                                                    alt="featured-restaurant-img1.jpg"
+                                                                    itemprop="image"></a>
+                                                        </div>
+                                                        <div class="featured-restaurant-info">
+                                                       
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-sm-12 col-lg-2 filter-item filter-item2">
+                                                    <div class="featured-restaurant-box wow fadeIn"
+                                                        data-wow-delay="0.2s">
+                                                        <div class="featured-restaurant-thumb">
+                                                            <a href="food-detail.html" title="" itemprop="url"><img
+                                                                    class="brd-rd50" src="product7.png"
+                                                                    alt="featured-restaurant-img2.jpg"
+                                                                    itemprop="image"></a>
+                                                        </div>
+                                                        <div class="featured-restaurant-info">
+                                                 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-sm-12 col-lg-2 filter-item filter-item3">
+                                                    <div class="featured-restaurant-box wow fadeIn"
+                                                        data-wow-delay="0.3s">
+                                                        <div class="featured-restaurant-thumb">
+                                                            <a href="food-detail.html" title="" itemprop="url"><img
+                                                                    class="brd-rd50" src="product7.png"
+                                                                    alt="featured-restaurant-img3.jpg"
+                                                                    itemprop="image"></a>
+                                                        </div>
+                                                        <div class="featured-restaurant-info">
+                                                 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-2 col-sm-12 col-lg-2 filter-item filter-item2 filter-item3">
+                                                    <div class="featured-restaurant-box wow fadeIn"
+                                                        data-wow-delay="0.4s">
+                                                        <div class="featured-restaurant-thumb">
+                                                            <a href="food-detail.html" title="" itemprop="url"><img
+                                                                    class="brd-rd50" src="product4.jpg"
+                                                                    alt="featured-restaurant-img4.jpg"
+                                                                    itemprop="image"></a>
+                                                        </div>
+                                                        <div class="featured-restaurant-info">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-2 col-sm-12 col-lg-2 filter-item filter-item1 filter-item3">
+                                                    <div class="featured-restaurant-box wow fadeIn"
+                                                        data-wow-delay="0.5s">
+                                                        <div class="featured-restaurant-thumb">
+                                                            <a href="food-detail.html" title="" itemprop="url"><img
+                                                                    class="brd-rd50" src="product2.jpg"
+                                                                    alt="featured-restaurant-img5.jpg"
+                                                                    itemprop="image"></a>
+                                                        </div>
+                                                        <div class="featured-restaurant-info">
+                
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-2 col-sm-12 col-lg-2 filter-item filter-item1 filter-item2">
+                                                    <div class="featured-restaurant-box wow fadeIn"
+                                                        data-wow-delay="0.6s">
+                                                        <div class="featured-restaurant-thumb">
+                                                            <a href="food-detail.html" title="" itemprop="url"><img
+                                                                    class="brd-rd50" src="prdocut1.jpg"
+                                                                    alt="featured-restaurant-img6.jpg"
+                                                                    itemprop="image"></a>
+                                                        </div>
+                                                        <div class="featured-restaurant-info">
+                                                
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <footer>
+                <div class="block top-padd80 bottom-padd80 dark-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <div class="footer-data">
+                                    <div class="row">
+                                        <div class="col-md-10 col-sm-10 col-lg-6">
+                                            <div class="widget about_widget wow fadeIn" data-wow-delay="0.1s">
+                                                <div class="logo">
+                                                    <h1 itemprop="headline"><a href="#" title="Home" itemprop="url"><img
+                                                                src="assets/images/logo.png" alt="logo.png"
+                                                                itemprop="image"></a></h1>
+                                                </div>
+                                                <p itemprop="description">Food Ordering is a Premium HTML Template. Best
+                                                    choice for your online store. Let purchase it to enjoy now</p>
+                                                <div class="social2">
+                                                    <a class="brd-rd50" href="#" title="Facebook" itemprop="url"
+                                                        target="_blank"><i class="fa fa-facebook"></i></a>
+                                                    <a class="brd-rd50" href="#" title="Google Plus" itemprop="url"
+                                                        target="_blank"><i class="fa fa-google-plus"></i></a>
+                                                    <a class="brd-rd50" href="#" title="Twitter" itemprop="url"
+                                                        target="_blank"><i class="fa fa-twitter"></i></a>
+                                                    <a class="brd-rd50" href="#" title="Pinterest" itemprop="url"
+                                                        target="_blank"><i class="fa fa-pinterest"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-2 col-sm-2 col-lg-2">
+                                            <div class="widget get_in_touch wow fadeIn" data-wow-delay="0.4s">
+                                                <h4 class="widget-title" itemprop="headline">GET IN TOUCH</h4>
+                                                <ul>
+                                                    <li><i class="fa fa-map-marker"></i>sfdffefefwfewfewf sector 153
+                                                        Noida</li>
+                                                    <li><i class="fa fa-phone"></i> +91 - 18001982374</li>
+                                                    <li><i class="fa fa-envelope"></i> <a href="#" title=""
+                                                            itemprop="url">JayyantPanwar80@gmail.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- Footer Data -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer><!-- footer -->
+            <div class="bottom-bar dark-bg text-center">
+                <div class="container">
+                    <p itemprop="description"><a target="_blank" href=""></a></p>
+                </div>
+            </div><!-- Bottom Bar -->
+
+
+    </main><!-- Main Wrapper -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+   
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <!--Below script to load header file-->
+    <script>$("#navbar").load("header.html");</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbBOosq_YIVNCVtgzTDaca8OI_Mlo_y1Y"></script>
+    <!-- <script> src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArlskABeuY6tOnXnYwrCRhoky3rIRt-E0&libraries=places&callback=initMap"></script> -->
+   
+    <script>
+       
+         document.getElementById("clearButton").addEventListener("click", function () {
+             document.getElementById("search").value = "";
+         });
+
+    </script>
+    <script>
+        function initAutocomplete() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: 48,
+                    lng: 4
+                },
+                zoom: 4,
+                disableDefaultUI: true
+            });
+
+            // Create the search box and link it to the UI element.
+            var input = document.getElementById('search');
+            var autocomplete = new google.maps.places.Autocomplete(input);
+            map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
+            var marker = new google.maps.Marker({
+                map: map
+            });
+
+            // Bias the SearchBox results towards current map's viewport.
+            autocomplete.bindTo('bounds', map);
+            // Set the data fields to return when the user selects a place.
+            autocomplete.setFields(
+                ['address_components', 'geometry', 'name']);
+
+            // Listen for the event fired when the user selects a prediction and retrieve
+            // more details for that place.
+            autocomplete.addListener('place_changed', function () {
+                var place = autocomplete.getPlace();
+                if (!place.geometry) {
+                    console.log("Returned place contains no geometry");
+                    return;
+                }
+                var bounds = new google.maps.LatLngBounds();
+                marker.setPosition(place.geometry.location);
+
+                if (place.geometry.viewport) {
+                    // Only geocodes have viewport.
+                    bounds.union(place.geometry.viewport);
+                } else {
+                    bounds.extend(place.geometry.location);
+                }
+                map.fitBounds(bounds);
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function (event) {
+            initAutocomplete();
+        });
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbBOosq_YIVNCVtgzTDaca8OI_Mlo_y1Y&libraries=places&callback=initMap"></script>
+    <script>
+        function dataManage(res) {
+            $("#search").val(res)
+        };
+    </script>
+
+    <script>
+        getLocation()
+        var x = document.getElementById("search");
+        let latitude = "";
+        let longitude = "";
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
+
+            getAddressByLtLng(latitude, longitude)
+        }
+        function getAddressByLtLng(lat, lng) {    
+            geocoder = new google.maps.Geocoder();
+            geocoder.geocode({
+                location: {
+                    lat: parseFloat(lat),
+                    lng: parseFloat(lng),
+                }
+
+            }).then((res) => {
+                console.log(res)
+
+                $("#search").val(res.results[0].formatted_address)
+
+
+            }).catch((error) => {
+                console.log(error)
+                // $("#rectangle").show
+            })
+        }
+        // function getPlace() {
+        //     var map = new google.maps.Map(document.getElementById('map'), {
+        //         zoom: 16,
+        //         center: uluru
+        //     });
+        //     var marker = new google.maps.Marker({
+        //         position: uluru,
+        //         map: map,
+        //         draggable: true
+        //     });
+        // }
+    </script>
+
+
+<!--below script is used for string similarity algo (soundex) for efficient product searching-->
+
+<script>
+    
+    /*----------------------Soundex Algorithm for string similarity----------------------------*/
+    /* -----------------------------returns percentage of similarity between two strings-----------*/
+    function soundex(word) {
+        const codes = {
+            B: 1,F: 1,P: 1,V: 1,C: 2,G: 2,J: 2,K: 2,Q: 2,S: 2,X: 2,Z: 2,D: 3,T: 3,L: 4,M: 5,N: 5,R: 6,};
+
+        // Remove all non-alphabetic characters and convert to uppercase
+        word = word.replace(/[^a-zA-Z]/g, '').toUpperCase();
+
+        // If the word has no characters left after stripping non-alphabetic characters, return '0000'
+        if (!word.length) {
+            return '0000';
+        }
+
+        // Apply the Soundex algorithm
+        let soundexCode = word[0];
+
+        for (let i = 1; i < word.length; i++) {
+            const code = codes[word[i]];
+
+            // Skip letters that are not assigned codes
+            if (!code) {
+            continue;
+            }
+
+            // Ignore adjacent repeated codes
+            if (code === codes[word[i - 1]]) {
+            continue;
+            }
+
+            // Add the code to the Soundex code
+            soundexCode += code;
+
+            // Stop after 6 characters
+            if (soundexCode.length === 6) {
+            break;
+            }
+        }
+
+        // Pad with zeroes to ensure the Soundex code is 4 characters long
+        while (soundexCode.length < 6) {
+            soundexCode += '0';
+        }
+
+        return soundexCode;
+        }
+
+
+        //works soundex algo & returns percentage similarity in two strings
+        function soundexSimilarityPercentage(str1, str2) {
+        const soundex1 = soundex(str1);
+        const soundex2 = soundex(str2);
+
+        if (soundex1 === soundex2) {
+            return 100;
+        }
+
+        let similarity = 0;
+
+        // Compare the Soundex codes character by character and increment similarity if the characters match
+        for (let i = 0; i < 6; i++) {
+            if (soundex1[i] === soundex2[i]) {
+            similarity++;
+            }
+        }
+
+        // Calculate similarity percentage
+        similarity = (similarity / 6) * 100;
+
+        return similarity;
+    }
+
+
+    /*------------------------------function to check if product entered is generic or specific---------------------------
+
+        => takes an argument s1 (str) & checks it in the products array for already present name & similarity. if already present then returns its search-name
+        =>else returns the original s1. 
+    */
+    const checkGenericProduct=(s1)=>{
+         //comparing similarity between product name entered by the user & with the above products array of objects (will be fetched via json in prodcution)
+         for(let i=0;i<products.length;i++){
+            if (soundexSimilarityPercentage(s1,products[i].name)>85){  //if the similarity between product entered by the user & the name in products array is greater than 75%
+                const product=products[i]['search-name'];                         //replace product with the search name of the product name in products array else search as entered by the user
+                return product;                                                      
+            }
+        }
+        return s1;
+    }
+
+
+
+    /* ------------------------------------------------------------------------------------- 
+                                JARO_WINKLER ALGO
+        returns a number [0,1] for similarity between two strings. 1 means completely similar
+        used to check difference in spellings. getting used to search product from one brand in other two brands
+    */
+
+    function jaroWinklerDistance(s1, s2) {
+            // Jaro distance
+            var m = 0;
+            var t = 0;
+            var s1_len = s1.length;
+            var s2_len = s2.length;
+            var max_len = Math.max(s1_len, s2_len);
+            var range = Math.floor(max_len / 2) - 1;
+            var s1_matches = new Array(s1_len);
+            var s2_matches = new Array(s2_len);
+            for (var i = 0; i < s1_len; i++) {
+                var low = (i >= range) ? i - range : 0;
+                var high = (i + range <= s2_len - 1) ? i + range : s2_len - 1;
+                for (var j = low; j <= high; j++) {
+                    if (s1_matches[i] !== true && s2_matches[j] !== true && s1[i] === s2[j]) {
+                        ++m;
+                        s1_matches[i] = true;
+                        s2_matches[j] = true;
+                        break;
+                    }
+                }
+            }
+            if (m === 0) {
+                return 0.0;
+            }
+            var jaro = ((m / s1_len + m / s2_len + (m - (t / 2)) / m)) / 3;
+
+            // Jaro-Winkler distance
+            var p = 0.1;
+            var l = 0;
+            while (l < 4 && s1[l] === s2[l]) {
+                ++l;
+            }
+            var jw = jaro + l * p * (1 - jaro);
+            return jw;
+        }
+
+        const chekSimilarProduct=(s1,s2)=>{
+            return  jaroWinklerDistance(s1,s2);
+        }
+
+
+</script>
+
+
+    <!-- this script is for calling data from backend -->
+    <script>
+
+
+        /* --------------- global variables---------------- */
+        let product;  //product to be searched
+        let blinkData; //blinkit data when recieved from backend
+        let dunzoData;
+        let instaData;
+
+
+        //products array of objects below
+        //should be fetched using json in production
+        const products=[
+        {
+            "name":"Mango",
+            "search-name":"Alphonso Mango",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/363834a.jpg?ts=1681295572"
+        },{
+            "name":"Watermelon",
+            "search-name":"kiran watermelon",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/369752a.jpg?ts=1658731562"
+        },{
+            "name":"grapes",
+            "search-name":"green grapes",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/347025a.jpg?ts=1652855625"
+        },{
+            "name":"Oranges",
+            "search-name":"nagpur orange",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/197975a.jpg?ts=1681040168"
+        },{
+            "name":"Apple",
+            "search-name":"shimla apple",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/428612a.jpg?ts=1658731563"
+        },{
+            "name":"Coconut",
+            "search-name":"brown coconut",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/4943a.jpg?ts=1664284085"
+        },{
+            "name":"ananas",
+            "search-name":"pineapple",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/190320a.jpg?ts=1639563832"
+        },{
+            "name":"Guava",
+            "search-name":"thai guava",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/458760a.jpg?ts=1637671022"
+        },{
+            "name":"kiwi",
+            "search-name":"zespri green kiwi",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/337437a.jpg?ts=1662109239"
+        },{
+            "name":"dates",
+            "search-name":"kimia dates",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/53888a.jpg"
+        },{
+            "name":"banana",
+            "search-name":"baby banana",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/342340a.jpg?ts=1679464054"
+        },{
+            "name":"jamun",
+            "search-name":"java plum kala",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/458953a.jpg"
+        },{
+            "name":"White Bread",
+            "search-name":"harvest gold white bread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/448095a.jpg?ts=1661157752"
+        },{
+            "name":"Brown Bread",
+            "search-name":"harvest gold brown bread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/24194a.jpg?ts=1661157751"
+        },{
+            "name":" Whole Wheat Bread",
+            "search-name":"english oven whole wheat bread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/383411a.jpg?ts=1675775414"
+        },{
+            "name":"Atta Bread",
+            "search-name":"harvest gold atta bread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/448096a.jpg?ts=1661157752"
+        },{
+            "name":"Multigrain Bread",
+            "search-name":"britania multigrain bread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/111463a.jpg?ts=1654679437"
+        },{
+            "name":"Bun",
+            "search-name":"english oven pav",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/18402a.jpg?ts=1657259224"
+        },{
+
+            "name":"Kulcha",
+            "search-name":"britania kulcha",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/335820a.jpg?ts=1613137900"
+        },{
+            "name":"Toned Milk",
+            "search-name":"amul toned milk",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/19512a.jpg?ts=1647923044"
+        },{
+            "name":"Full Cream Milk",
+            "search-name":"mother dairy full cream milk",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/19924a.jpg?ts=1644476636"
+        },{
+            "name":"Cow Fresh Milk",
+            "search-name":"mother dairy cow fresh milk",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/339309a.jpg"
+        },{
+            "name":"Lactose Free Milk",
+            "search-name":"amul lactose free milk",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/206314a.jpg?ts=1589186576"
+        },{
+            "name":"Soy Milk",
+            "search-name":"sofit soy milk",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/422749a.jpg?ts=1679550340"
+        },  {
+            "name":"cold drink",
+            "search-name":"coca-cola",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/283a.jpg?ts=1657699524"
+        },{
+            "name":"Non Alcoholic Beer",
+            "search-name":"Coolberg Cranberry non-alcoholic beer",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/456321a.jpg?ts=1627393208"
+        },{
+            "name":"Masala Soda Drink",
+            "search-name":"lahori zeera masala soda",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/497383a.jpg"
+        },{
+            "name":"Mango Drink",
+            "search-name":"Slice drink",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/32790a.jpg?ts=1588938067"
+        },{
+            "name":"Mixed Fruit Juice",
+            "search-name":"real mixed fruit",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_215472.jpg?ts=1653393770"
+        },{
+            "name":"Apple Juice",
+            "search-name":"appy apple juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/500869a.jpg"
+        },{
+            "name":"Cranberry Juice",
+            "search-name":"tropicana cranberry juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/45363a.jpg"
+        },{
+            "name":"orange juice",
+            "search-name":"b natural orange juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/33218a.jpg?ts=1680528255"
+        },{
+            "name":"Mosambi Juice",
+            "search-name":"real mosambi juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/62221a.jpg?ts=1650622549"
+        },{
+            "name":"Guava Juice",
+            "search-name":"fresca guava juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_483973.jpg?ts=1653900370"
+        },{
+            "name":"Litchi Juice",
+            "search-name":"fresca litchi juice",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/480578a.jpg?ts=1663053108"
+        }, {
+            "name":"Lays",
+            "search-name":"lays magic masala",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/240092a.jpg?ts=1668146939"
+        },
+        {
+            "name":"Kurkure",
+            "search-name":"kurkure masala munch",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_271303.jpg"
+        },{
+            "name":"Uncle Chips",
+            "search-name":"uncle chipps spicy treat flavour",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_395336.jpg?ts=1668152050"
+        },{
+            "name":"pringles",
+            "search-name":"pringles sour and cream",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/33863a.jpg?ts=1675842248"
+        },{
+            "name":"Bingo",
+            "search-name":"bingo mad angles tomato madness",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_401231.jpg?ts=1653897640"
+        },{
+            "name":"Naachos",
+            "search-name":"doritos cheese nacchos",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/432818a.jpg?ts=1669469997"
+        },{
+            "name":"Aloo Bhujia",
+            "search-name":"haldiram aloo bhujia",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/380252a.jpg?ts=1672286803"
+        },{
+            "name":"Kaju Mixture Namkeen",
+            "search-name":"haldiram kaju mixture namkeen",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/11187a.jpg"
+        },{
+            "name":"Salted Peanuts",
+            "search-name":"haldiram classic salted peanuts",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_481985.jpg?ts=1653898886"
+        },{
+            "name":"Nut Cracker",
+            "search-name":"haldiram nut cracker",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_481989.jpg?ts=1661324838"
+        }, {
+            "name":"Whole Wheat Atta",
+            "search-name":"Aashirwaad whole wheat aata",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/333324a.jpg?ts=1680539705"
+        },{
+            "name":"Multigrain Atta",
+            "search-name":"pilsbury multigrain atta",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/3867a.jpg?ts=1628503612"
+        },{
+            "name":"Soyabean Oil",
+            "search-name":"fortune refined soyabean oil",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/52a.jpg?ts=1624964816"
+        },{
+            "name":"Mustard Oil",
+            "search-name":"pansari kachi ghani mustard oil",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/103115a.jpg?ts=1668168909"
+        },{
+            "name":"Rice Bran Oil",
+            "search-name":"fortune rice bran oil",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/14624a.jpg?ts=1624885138"
+        },{
+            "name":"Sunflower Oil",
+            "search-name":"fortune sunflower oil",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/400963a.jpg?ts=1583125763"
+        },{
+            "name":"Olive Oil",
+            "search-name":"figaro extra virgin olive oil",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/9349a.jpg?ts=1636526081"
+        }, {
+            "name":"Ful Ghobi",
+            "search-name":"Cauliflower",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467646a.jpg?ts=1651220576"
+        },{
+            "name":"Chukandar",
+            "search-name":"beetroot",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467637a.jpg?ts=1673944535"
+        },{
+            "name":"Onion",
+            "search-name":"organic pyaz",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467655a.jpg?ts=1673945238"
+        },{
+            "name":"lawkey",
+            "search-name":"bottle gourd",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467639a.jpg?ts=1666864261"
+        },{
+            "name":"Shimla Mirch",
+            "search-name":"green capsicum",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/340626a.jpg?ts=1667470862"
+        },{
+            "name":"Adhrak",
+            "search-name":"ginger",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467652a.jpg?ts=1673945214"
+        },{
+            "name":"Lehsun",
+            "search-name":"garlic",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/467651a.jpg?ts=1673945199"
+        }, {
+            "name":"Choclate Ice Cream",
+            "search-name":"vadilal gourmet choclate ice cream",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/482628a.jpg?ts=1679484378"
+        },{
+            "name":"Vanilla Ice Cream",
+            "search-name":"amul vanilla ice cream",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/438914a.jpg?ts=1672030442"
+        },{
+            "name":"Mango Ice Cream",
+            "search-name":"creampot mango frozen dessert",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/483745a.jpg"
+        },{
+            "name":"Butterscotch Ice Cream",
+            "search-name":"Vadilal gourmet butterscotch ice cream",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/482621a.jpg?ts=1672381958"
+        },{
+            "name":"Cone Ice Cream",
+            "search-name":"kwality walls cornetto",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/450546a.jpg?ts=1661421808"
+        },{
+            "name":"Ice Cream Stick",
+            "search-name":"kwality walls magnum",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/450560a.jpg?ts=1661421808"
+        },   {
+            "name":"Lipstick",
+            "search-name":"lakme forever lipstick",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/495629a.jpg?ts=1674471371"
+        },{
+            "name":"Compact Powder",
+            "search-name":"maybelline new york compact powder",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/477224a.jpg?ts=1675428534"
+        },{
+            "name":"Hair Mask",
+            "search-name":"pilgrim argan oil hair mask",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/492983a.jpg?ts=1680779417"
+        },
+        {
+            "name":"Body Lotion",
+            "search-name":"nivia body lotion",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/443265a.jpg?ts=1678868037"
+        },{
+            "name":"Eyeliner",
+            "search-name":"maybelline new york eyeliner",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/477220a.jpg?ts=1675428420"
+        },{
+            "name":"Kajal",
+            "search-name":"lakme iconic black kajal",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/36800a.jpg?ts=1641194858"
+        },  {
+            "name":"Toothpaste",
+            "search-name":"pepsodent toothpaste",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/974a.jpg?ts=1643120589"
+        },{
+            "name":"Toothbrush",
+            "search-name":"oralb toothbrush",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/401914a.jpg?ts=1674651733"
+        },{
+            "name":"Electric Toothbrush",
+            "search-name":"colgate electric toothbrush",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/490669a.jpg"
+        },{
+            "name":"Charcoal Face Wash",
+            "search-name":"nivea charcoal facewash",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/23960a.jpg?ts=1591260811"
+        },{
+            "name":"Herbal Face Wash",
+            "search-name":"lotus herbal facewash",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/493739a.jpg"
+        },{
+            "name":"Sunscreen",
+            "search-name":"lakme sunscreen",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/416407a.jpg?ts=1680785290"
+        },{
+            "name":"Bathing Soap",
+            "search-name":"dettol bathing soap",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/270248a.jpg?ts=1672317444"
+        },{
+            "name":"Deodrant Soap",
+            "search-name":"wildstone deodrant soap",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/496985a.jpg"
+        },{
+            "name":"Moisturizing Cream",
+            "search-name":"nivea mosturizing cream",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/19962a.jpg?ts=1647003456"
+        },{
+            "name":"Anti Dandruff Shampoo",
+            "search-name":"head and shoulders shampoo",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/91025a.jpg?ts=1669187623"
+        },{
+            "name":"Hair Conditioner",
+            "search-name":"dove hair conditioner",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/19640a.jpg?ts=1679465777"
+        },{
+            "name":"Candy",
+            "search-name":"alpenliebe eclairs candy",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/425350a.jpg?ts=1680680832"
+        },{
+            "name":"Choclate",
+            "search-name":"cadbury dairy milk choclate",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_378161.jpg?ts=1674802461"
+        },{
+            "name":"Coconut Chocolate",
+            "search-name":"bounty choclate coconut",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/498788a.jpg?ts=1676286750"
+        },{
+            "name":"Dark Choclate",
+            "search-name":"cadbury bournville",
+            "img":"https://ik.imagekit.io/dunzo/tr:w-$w$,h-$h$,cm-pad_resize/1645511123839_product_5ef34ff87b2b3a5f85749c3b_1.jpg"
+        },{
+            "name":"Choclate Spread",
+            "search-name":"nutella hazelnut choclate spread",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/458210a.jpg?ts=1668489789"
+        },{
+            "name":"Choclate Peanut Butter",
+            "search-name":"myfitness choclate peanut butter",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/sliding_image/444825a.jpg?ts=1652443853"
+        },{
+            "name":"Choclate Cake",
+            "search-name":"britania choclate cake",
+            "img":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=180/app/images/products/full_screen/pro_238052.jpg?ts=1658585944"
+        },{
+            "name":"Peanut Butter",
+            "search-name":"sundrop peanut butter",
+            "img":"https://ik.imagekit.io/dunzo/tr:w-$w$,h-$h$,cm-pad_resize/1645118217361_product_5bd2cefb73cdab71358774f7_1.jpg"
+        }
+    
+    ]
+
+       
+        //$(".preloader").hide();
+
+
+  
+        //getting data one at a time
+        const getDataDunzo=async(product)=>{
+            showLoadingCards("dunzo");
+          
+            
+            try{
+
+                const location=document.querySelector("#search").value;
+
+                //getting from dunzo
+                const res=await fetch(`http://localhost:3000/getDunzo?location=${location}&&product=${product}`,{
+                method:"GET",
+                headers:{
+                    "Content-Type": "application/json"
+                },
+
+            })
+
+            const data=await res.json();
+            dunzoData=await data.data.dunzoData;
+            if(!dunzoData){
+                console.log("dunzo does not deliver to the location provided...search for another location");
+                $("#dunzoCards-container").empty();
+                $("#getDataDunzo").show();
+                return;
+            }
+
+            if(dunzoData.length===0){
+                $("#dunzoCards-container").empty();
+                $("#getDataDunzo").show();
+                return;
+            }
+            await showDataDunzo(data.data.dunzoData);
+            
+            }catch(err){
+                console.log("error occurred while fetching from dunzo!!")
+                console.log(err)
+            }
+            
+        }
+
+        const getDataInsta=async(product)=>{
+
+            //show loading cards until data is fetched
+            showLoadingCards("insta");
+            
+
+            try{
+
+                const location=document.querySelector("#search").value;
+                     
+            //getting from instamart
+            const res=await fetch(`http://localhost:3000/getInsta?location=${location}&&product=${product}`,{
+                method:"GET",
+                headers:{
+                    "Content-Type":"application/json"
+                }
+
+                
+            })
+
+          
+
+            const data=await res.json();
+            instaData=await data.data.instaData
+
+            if(!instaData){
+                $("#instaCards-container").empty();
+                $("#getDataInsta").show();
+                return;
+            }
+            showDataInsta(instaData);
+           
+
+            }catch(err){
+                console.log("an error occurred while fetching from Instamart")
+                console.log(err)
+            }
+        }
+        
+        
+        const getDataBlink=async(product)=>{
+            showLoadingCards("blink");
+           
+
+            try{
+                const location=document.querySelector("#search").value;
+
+                const res=await fetch(`http://localhost:3000/getBlink?location=${location}&&product=${product}`,{
+                    method:"GET",
+                    headers:{
+                        "Content-Type":"application/json"
+                    }
+                })
+
+                const data=await res.json();
+                blinkData=await data.data.blinkData;
+                if(!blinkData){
+                    console.log("blinkit does not deliver to the above location");
+                    $("#blinkCards-container").empty();
+                    $("#getDataBlink").show();
+                    return;
+                }
+
+                if(blinkData.length===0){
+                    $("#blinkCards-container").empty();
+                    $("#getDataBlink").show();
+                    return;
+                }
+                showDataBlink(blinkData)
+                
+
+            }catch(err){
+                console.log("an error occured while fetching from blinkit")
+                console.log(err)
+            }
+        }
+
+
+        
+
+
+        //getting data
+        const sendQuery=async()=>{
+
+        $(".preloader").show();
+
+        //showing loading cards until data is fetched
+      
+       
+        
+        const location=document.querySelector("#search").value;
+
+
+        product=await checkGenericProduct(document.querySelector("#productName").value);
+        console.log(product);
+       
+        //removing all load more button
+        $(".loadMore-button").remove();
+        
+            
+        
+       await Promise.any([getDataBlink(product),getDataDunzo(product),getDataInsta(product)])
+         //once any one of the api returns response 
+        $(".preloader").hide();
+        $("#brand-container").show();
+        }
+
+
+
+        /* ---------------------------- 
+        button click events to get data from backend
+        -------------------------------
+        */
+        
+        //get all data
+       $("#getDataButton").click(sendQuery)
+
+       //get blinkit data
+       $("#getBlinkButton").click(async()=>{
+        $("#getBlinkButton").hide();
+        await getDataBlink(product)}
+        )
+
+       //get dunzo data
+       $("#getDunzoButton").click( async ()=>{
+        $("#getDunzoButton").hide();
+        await getDataDunzo(product);
+       })
+
+       //get insta data
+       $("#getInstaButton").click(async()=>{
+        $("#getInstaButton").hide()
+        await getDataInsta(product)
+       })
+
+       
+
+
+       /* -----------------------------------
+       button click events for product categories; navigate to list.html
+        -------------------------------------------------
+       */
+
+       document.querySelector("#fruits").addEventListener("click",()=>{
+        localStorage.setItem("category","fruits");
+       });
+       document.querySelector("#coldrink").addEventListener("click",()=>{
+        localStorage.setItem("category","coldrink");
+       });
+       document.querySelector("#vegetables").addEventListener("click",()=>{
+        localStorage.setItem("category","vegetables");
+       });
+       document.querySelector("#oilAtta").addEventListener("click",()=>{
+        localStorage.setItem("category","oilAtta");
+       });
+       document.querySelector("#chips").addEventListener("click",()=>{
+        localStorage.setItem("category","chips");
+       })
+       $("#fruits").click(localStorage.setItem("category","fruits"));
+       $("#chips").click(localStorage.setItem("category","chips"));
+       $("#vegetables").click(localStorage.setItem("category","vegetables"));
+       $("#oilAtta").click(localStorage.setItem("category","oilAtta"));
+       $("#coldrink").click(localStorage.setItem("category","coldrink"));
+       $("#breadMilk").click(localStorage.setItem("category","breadMilk"));
+
+
+       
+
+   
+    //****************************************
+    //display data to frontend
+    //**************************************
+
+
+    //cards 
+
+    let dunzoProduct;
+    let blinkProduct;
+    let instaProduct;
+
+
+
+    //method to show 3 loading cards for brands
+
+    const showLoadingCards=(brand)=>{
+        const container=document.querySelector(`#${brand}-container>div`);
+
+        for(let i=0;i<3;i++){
+            const loadingCard=document.createElement("div");
+            loadingCard.classList.add("card-container");
+            container.appendChild(loadingCard);
+
+            const loadingUpperCard=document.createElement("div");
+            loadingUpperCard.classList.add("card-upper-container");
+            const loadingLowerCard=document.createElement("div");
+            loadingLowerCard.classList.add("card-lower-container");
+
+            loadingCard.appendChild(loadingUpperCard);
+            loadingCard.appendChild(loadingLowerCard);
+        }
+    }
+
+
+
+    //Generic method to show data in the brand containers
+    const showCards=(data,brand)=>{
+        const container=document.querySelector(`#${brand}-container>div`);
+
+        
+        data.forEach((item)=>{
+            const itemDiv=document.createElement("div");
+            container.appendChild(itemDiv);
+
+            const itemData={
+                name:item.name,
+                image:item.image,
+                price:item.price,
+                brand:brand
+            }
+
+            if (brand==="insta" && item.image){
+                item.image=item.image.slice(5,item.image.length-2)
+            }
+
+
+            const html=`
+              
+              <div class="popular-dish-box wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                  <div class="popular-dish-thumb">
+                      <a title="" itemprop="url"><img src="${item.image == undefined ? "https://resources.dunzo.com/web-assets/prod/_next/static/images/SkuItemPlaceholder-f84baae1b76ec41168f8921814c21e72.png" : item.image}" alt="popular-dish-img1.jpg" itemprop="image"></a>
+                  </div>
+                  <div class="popular-dish-info card-body p-3">
+                      <h4 itemprop="headline">
+                      <a title="" itemprop="url">${item.name ? item.name : "out of stock" } </a>
+                      </h4>
+                      <h6>${item.quantity}</h6>
+                      <div class="price-container">
+                          <span class="price">${item.price ? item.price : "out of stock"}</span>
+                          <a class="brd-rd2" title="Compare Now" onclick='foodDetail(${JSON.stringify(itemData)})'   itemprop="url">Compare</a>
+                      </div>
+                  </div>
+              </div>
+                                                      
+          `
+          itemDiv.innerHTML=html;
+
+
+          //when clicking on any product it compares it
+          itemDiv.addEventListener("click",()=>{
+            const productToCompare=item.name;
+            const quantityToCompare=item.quantity;
+            const amountToCompare=parseInt(item.price.slice(1)); 
+
+
+            const getBestMatch=(data)=>{
+
+                if(data.length<1){
+                    return
+                }
+
+                let maxProductNameSimilarity=0;
+                let maxProductNameSimilarityIndex=0;
+
+                let maxQuantitySimilarity=0;
+                let maxQuantitySimilarityIndex=0;
+
+                let maxAmountSimilarity=100000000000000000;
+                let maxAmountSimilarityIndex=0;
+
+                for(let i=0;i<data.length;i++){
+                    const brandProduct=data[i].name;
+                    const brandQuantity=data[i].quantity;
+                    const brandAmount=typeof(data[i].price)==="string" ? parseInt(data[i].price.slice(1)): data[i].price;
+
+                    const brandProductNameSimilarity=chekSimilarProduct(productToCompare,brandProduct);
+                    const brandQuantitySimilarity=chekSimilarProduct(quantityToCompare,brandQuantity);
+                    const brandAmountSimilarity=Math.abs(amountToCompare-brandAmount);
+
+
+                    if(brandProductNameSimilarity>maxProductNameSimilarity){
+                        maxProductNameSimilarity=brandProductNameSimilarity;
+                        maxProductNameSimilarityIndex=i
+                    };
+                    if(brandQuantitySimilarity>maxQuantitySimilarity){
+                        maxQuantitySimilarity=brandQuantitySimilarity;
+                        maxQuantitySimilarityIndex=i;
+                    };
+                    if(brandAmountSimilarity<maxAmountSimilarity){
+                        maxAmountSimilarity=brandAmountSimilarity;
+                        maxAmountSimilarityIndex=i;
+                    }
+                }
+                
+                return{
+                    "maxProductNameSimilarity":maxProductNameSimilarity,
+                    "maxProductNameSimilarityIndex":maxProductNameSimilarityIndex,
+                    "maxQuantitySimilarity":maxQuantitySimilarity,
+                    "maxQuantitySimilarityIndex":maxQuantitySimilarityIndex,
+                    //"maxAmountSimilarityIndex":maxAmountSimilarityIndex,
+                }
+            }
+
+          
+
+            if (brand==="blink"){
+
+                //since the clicked product is already a blinkit product
+                blinkProduct={
+                    product:item,
+                    isBest:true,
+                    isSimilar:false,
+                    isReferrer:true,
+                }
+
+                //getting best matchin indexes on the 3 parameters (name,quantity & amount) from the above method
+
+                 dunzoSimilarityIndexes=getBestMatch(dunzoData);
+                 instaSimilarityIndexes=getBestMatch(instaData);
+
+                 //if product name & quantity are highly similar with the clicked product & both have same quantity then its a best match
+                 //getting best match / similar match in dunzo data
+                 if (dunzoSimilarityIndexes.maxProductNameSimilarity>0.75 && dunzoSimilarityIndexes.maxQuantitySimilarity>0.85 &&  dunzoData[dunzoSimilarityIndexes.maxProductNameSimilarityIndex].quantity===dunzoData[dunzoSimilarityIndexes.maxQuantitySimilarityIndex].quantity){
+                    dunzoProduct={
+                        product:dunzoData[dunzoSimilarityIndexes.maxProductNameSimilarityIndex],
+                        isBest:true,
+                        isSimilar:false,
+                        isReferrer:false,
+                    };
+                 }else{  //else the we could not find the exact same product in the received data hence showing similar product
+                    dunzoProduct={
+                        product:dunzoData[dunzoSimilarityIndexes.maxProductNameSimilarityIndex],
+                        isBest:false,
+                        isSimilar:true,
+                        isReferrer:false,
+                    }
+                 }
+
+                 //read above comments
+                 //getting best match/ similar match in insta data
+                 if(instaSimilarityIndexes.maxProductNameSimilarity>0.75 && instaSimilarityIndexes.maxQuantitySimilarity>0.85 && instaData[instaSimilarityIndexes.maxProductNameSimilarityIndex].quantity===instaData[instaSimilarityIndexes.maxQuantitySimilarityIndex].quantity){
+                    instaProduct={
+                        product:instaData[instaSimilarityIndexes.maxProductNameSimilarityIndex],
+                        isBest:true,
+                        isSimilar:false,
+                        isReferrer:false,
+                    }
+                 }else{
+                    instaProduct={
+                        product:instaData[instaSimilarityIndexes.maxProductNameSimilarityIndex],
+                        isBest:false,
+                        isSimilar:true,
+                        isReferrer:false,
+                    }
+                 }
+            }else if(brand==="dunzo"){
+
+
+                //since current clicked product is already a dunzo product
+                dunzoProduct={
+                    product:item,
+                    isBest:true,
+                    isSimilar:false,
+                    isReferrer:true,
+                }
+
+                //getting similarity indexes
+                 blinkSimilarityIndexes=getBestMatch(blinkData);
+                 instaSimilarityIndexes=getBestMatch(instaData);
+
+                  //if product name & quantity are highly similar with the clicked product & both have same quantity then its a best match
+                 //getting best match / similar match in dunzo data
+                 if (blinkSimilarityIndexes.maxProductNameSimilarity>0.75 && blinkSimilarityIndexes.maxQuantitySimilarity>0.85 &&  blinkData[blinkSimilarityIndexes.maxProductNameSimilarityIndex].quantity===blinkData[blinkSimilarityIndexes.maxQuantitySimilarityIndex].quantity){
+                    blinkProduct={
+                        product:blinkData[blinkSimilarityIndexes.maxProductNameSimilarityIndex],
+                        isBest:true,
+                        isSimilar:false,
+                        isReferrer:false,
+                    };
+                 }else{  //else the we could not find the exact same product in the received data hence showing similar product
+                    blinkProduct={
+                        product:blinkData[blinkSimilarityIndexes.maxProductNameSimilarityIndex],
+                        isBest:false,
+                        isSimilar:true,
+                        isReferrer:false,
+                    }
+                 }
+
+                 //read above comments
+                 //getting best match/ similar match in insta data
+                 if(instaSimilarityIndexes.maxProductNameSimilarity>0.75 && instaSimilarityIndexes.maxQuantitySimilarity>0.85 && instaData[instaSimilarityIndexes.maxProductNameSimilarityIndex].quantity===instaData[instaSimilarityIndexes.maxQuantitySimilarityIndex].quantity){
+                    instaProduct={
+                        product:instaData[instaSimilarityIndexes.maxProductNameSimilarityIndex],
+                        isBest:true,
+                        isSimilar:false,
+                        isReferrer:false,
+                    }
+                 }else{
+                    instaProduct={
+                        product:instaData[instaSimilarityIndexes.maxProductNameSimilarityIndex],
+                        isBest:false,
+                        isSimilar:true,
+                        isReferrer:false,
+                    }
+                 }
+
+
+            }else{
+
+                //since currently clicked product already belons to instamart product
+                instaProduct={
+                    product:item,
+                    isBest:true,
+                    isSimilar:false,
+                    isReferrer:true,
+                }
+
+                //getting similarity indexes
+                 blinkSimilarityIndexes=getBestMatch(blinkData);
+                 dunzoSimilarityIndexes=getBestMatch(dunzoData);
+
+                 
+                  //if product name & quantity are highly similar with the clicked product & both have same quantity then its a best match
+                 //getting best match / similar match in dunzo data
+                 if (blinkSimilarityIndexes.maxProductNameSimilarity>0.75 && blinkSimilarityIndexes.maxQuantitySimilarity>0.85 &&  blinkData[blinkSimilarityIndexes.maxProductNameSimilarityIndex].quantity===blinkData[blinkSimilarityIndexes.maxQuantitySimilarityIndex].quantity){
+                    blinkProduct={
+                        product:blinkData[blinkSimilarityIndexes.maxProductNameSimilarityIndex],
+                        isBest:true,
+                        isSimilar:false,
+                        isReferrer:false,
+                    };
+                 }else{  //else the we could not find the exact same product in the received data hence showing similar product
+                    blinkProduct={
+                        product:blinkData[blinkSimilarityIndexes.maxProductNameSimilarityIndex],
+                        isBest:false,
+                        isSimilar:true,
+                        isReferrer:false,
+                    }
+                 }
+
+                 //read above comments
+                 //getting best match/ similar match in insta data
+                 if(dunzoSimilarityIndexes.maxProductNameSimilarity>0.75 && dunzoSimilarityIndexes.maxQuantitySimilarity>0.85 && dunzoData[dunzoSimilarityIndexes.maxProductNameSimilarityIndex].quantity===dunzoData[dunzoSimilarityIndexes.maxQuantitySimilarityIndex].quantity){
+                    dunzoProduct={
+                        product:dunzoData[dunzoSimilarityIndexes.maxProductNameSimilarityIndex],
+                        isBest:true,
+                        isSimilar:false,
+                        isReferrer:false,
+                    }
+                 }else{
+                    dunzoProduct={
+                        product:dunzoData[dunzoSimilarityIndexes.maxProductNameSimilarityIndex],
+                        isBest:false,
+                        isSimilar:true,
+                        isReferrer:false,
+                    }
+                 }
+            }
+          
+
+            //setting products to local storage
+            localStorage.setItem("dunzoProduct",JSON.stringify(dunzoProduct));
+            localStorage.setItem("blinkProduct",JSON.stringify(blinkProduct));
+            localStorage.setItem("instaProduct",JSON.stringify(instaProduct));
+
+            //redirecting to product compare page
+            window.location.href="productCompare.html";
+            })
+
+           
+
+           
+        })
+    }
+
+    //******************************************
+    //DUNZO
+    //*****************************************   
+
+    const showDataDunzo=(dunzoData)=>{
+
+        dunzoData=dunzoData.slice(0,60);
+        //remove previous data in the container & display recieved data from backend
+        $("#dunzoCards-container").empty();
+      
+        let index=0;  
+        if(dunzoData && dunzoData.length>0){
+            //hiding dunzo reload button
+            $("#getDunzoButton").hide();
+           showCards(dunzoData.slice(0,6),"dunzo");
+           index+=6;
+            const loadMoreButton=document.createElement("button");
+            document.querySelector("#dunzo-container").appendChild(loadMoreButton);
+            loadMoreButton.classList.add("load-button");
+            loadMoreButton.id="dunzo-load";
+            loadMoreButton.classList.add("loadMore-button");
+            loadMoreButton.textContent="Load More";
+            
+
+             
+            document.querySelector("#dunzo-load").addEventListener("click",()=>{
+                    if (index+6<dunzoData.length){
+                        const slicedDunzoData=dunzoData.slice(index,index+6)
+                        showCards(slicedDunzoData,"dunzo");
+                        index+=6;
+                    }else if(index<dunzoData.length){
+                        showCards(dunzoData.slice(index),"dunzo")
+                    }else{
+                        document.querySelector(`#dunzo-load`).style.display='none';
+                    }
+                });
+              
+              
+              
+        }else{
+            $("#dunzo-load").hide();
+            $("#getDunzoButton").show();
+        }
+    }
+
+
+    //*****************************
+    //INSTAMART
+    //*****************************
+
+    const showDataInsta=(instaData)=>{
+      
+        //removing previous data & displaying data recieved from backend 
+        $("#instaCards-container").empty();
+
+
+        let index=0;
+      
+       
+        const instaContainer=document.querySelector("#insta-container")
+
+         console.log("showing insta data")
+         console.log(instaData)
+
+        if(instaData && instaData.length>0){
+            const data=instaData;
+      
+
+            $("#getInstaButton").hide();
+            instaData=instaData.slice(0,6);
+            index+=6;
+           
+            showCards(instaData,"insta")
+            const loadMoreButton=document.createElement("button");
+            document.querySelector("#insta-container").appendChild(loadMoreButton);
+            loadMoreButton.classList.add("load-button");
+            loadMoreButton.id="insta-load";
+            loadMoreButton.classList.add("loadMore-button");
+            loadMoreButton.textContent="Load More";
+            
+              //showing load button
+              $(".load-button").show();
+              $("#insta-load").click(()=>{
+                if(index+6<data.length){
+                    const instaData=data.slice(index,index+6);
+                    showCards(instaData,"insta");
+                    index+=6;
+                }else{
+                    $("#insta-load").hide();
+                }
+               
+              })
+        }else{
+            $("#insta-load").hide();
+            $("#getInstaButton").show();
+
+        }
+    }
+
+
+    const showDataBlink=(blinkData)=>{
+
+
+        //removing previous data & displaying data received from backend
+        $("#blinkCards-container").empty();
+
+        let index=0;
+
+         console.log("showing blink data")
+         console.log(blinkData)
+          const blinkContainer=document.querySelector("#blink-container")
+          
+
+        
+        if(blinkData && blinkData.length>0){
+
+          
+            const data=blinkData;
+           
+            $("#getBlinkButton").hide();
+            blinkData=blinkData.slice(0,6);
+            index+=6;
+          
+            //looping through data & creating div
+
+            showCards(blinkData,"blink");
+
+            const loadMoreButton=document.createElement("button");
+            document.querySelector("#blink-container").appendChild(loadMoreButton);
+            loadMoreButton.classList.add("load-button");
+            loadMoreButton.id="blink-load";
+            loadMoreButton.classList.add("loadMore-button");
+            loadMoreButton.textContent="Load More";
+        
+
+            //showing load button
+            $(".load-button").show();
+            $("#blink-load").click(()=>{
+                let blinkData;
+                if(index<data.length){
+
+                    if(index+6<data.length){
+                        blinkData=data.slice(index,index+6);
+                    }else{
+                        blinkData=data.slice(index,data.length-1);
+                    }
+                    
+                    index+=6;
+                    showCards(blinkData,"blink")
+                }else{
+                    $("#blink-load").hide();
+                }
+            })
+
+        }else{
+            $("#blink-load").hide();
+            $("#getBlinkButton").show();
+        }
+    }
+
+      
+
+       
+        
+        
+    
+
+
+       
+    </script>
+
+    <script>
+        function foodDetail(event) {
+            // console.log("be", localStorage.getItem('singleView'))
+            // localStorage.removeItem("singleView")
+            // console.log("be", localStorage.getItem('singleView'))
+            // console.log(event)
+            localStorage.removeItem('singleView');
+            localStorage.setItem("singleView", JSON.stringify(event))
+            // console.log(event);
+            // console.log(localStorage.getItem("singleView"));
+            location.href = "food-detail.html"
+        }
+    </script>
+
+
+
+    <!-- this script is for auto suggestion in serch bar -->
+    <script>
+        const input = document.querySelector('#productName');
+        const suggestions = document.querySelector('.suggestions ul');
+        const wordArray = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackberry', 'Blackcurrant', 'Blueberry', 'Boysenberry', 'Currant', 'Cherry', 'Coconut', 'Cranberry', 'Cucumber', 'Custard apple', 'Damson', 'Date', 'Dragonfruit', 'Durian', 'Elderberry', 'Feijoa', 'Fig', 'Gooseberry', 'Grape', 'Raisin', 'Grapefruit', 'Guava', 'Honeyberry', 'Huckleberry', 'Jabuticaba', 'Jackfruit', 'Jambul', 'Juniper berry', 'Kiwifruit', 'Kumquat', 'Lemon', 'Lime', 'Loquat', 'Longan', 'Lychee', 'Mango', 'Mangosteen', 'Marionberry', 'Melon', 'Cantaloupe', 'Honeydew', 'Watermelon', 'Miracle fruit', 'Mulberry', 'Nectarine', 'Nance', 'Olive', 'Orange', 'Clementine', 'Mandarine', 'Tangerine', 'Papaya', 'Passionfruit', 'Peach', 'Pear', 'Persimmon', 'Plantain', 'Plum', 'Pineapple', 'Pomegranate', 'Pomelo', 'Quince', 'Raspberry', 'Salmonberry', 'Rambutan', 'Redcurrant', 'Salak', 'Satsuma', 'Soursop', 'Star fruit', 'Strawberry', 'Tamarillo', 'Tamarind', 'Yuzu', 'Carrots', 'Broccoli', 'Spinach', 'Lettuce', 'Tomatoes', 'Peppers', 'Cucumber', 'Zucchini', 'Potatoes', 'Onions', 'Garlic', 'Eggplant', 'Cauliflower', 'Brussels Sprouts', 'Green Beans', 'Peas', 'Corn', 'Artichokes', 'Asparagus', 'Mushrooms', 'Kale', 'Cabbage', 'Beets', 'Radishes', 'Turnips', 'Sweet Potatoes', 'Pumpkin', 'Squash', 'Okra', 'Fennel', 'Leeks', 'Scallions', 'Chives', 'Endive', 'Watercress', 'Arugula', 'Romaine', 'Radichio', 'Collard Greens', 'Swiss Chard', 'Oatmeal', 'Granola', 'Rice Krispies', 'Cheerios', 'Frosted Flakes', 'Corn Flakes', 'Raisin Bran', 'Special K', 'Lucky Charms', 'Cinnamon Toast Crunch', 'Honey Nut Cheerios', 'Cocoa Puffs', 'Froot Loops', 'Wheaties', 'Life', 'Crispix', 'Kix', 'Pops', 'Chex', 'Corn Pops', 'Rice Chex', 'Honey Bunches of Oats', 'Shredded Wheat', 'Grape - Nuts', 'Multi - Grain Cheerios', 'Cookie Crisp', 'Golden Grahams', 'Trix', 'Apple Jacks', 'Cocoa Pebbles', 'Fruity Pebbles', 'Cinnamon Life', 'Honeycomb', 'Alpha - Bits', 'Reese\'s Puffs', 'Cocoa Krispies', 'Fiber One', 'Fork', 'Knife', 'Spoon', 'Teaspoon', 'Tablespoon', 'Serrated Knife', 'Butter Knife', 'Soup Spoon', 'Salad Fork', 'Dinner Fork', 'Dinner Knife', 'Steak Knife', 'Fish Knife', 'Oyster Fork', 'Fruit Knife', 'Grapefruit Spoon', 'Ice Cream Spoon', 'Demitasse Spoon', 'Moka Spoon', 'Sugar Spoon', 'Salt and Pepper Shakers', 'Gravy Ladle', 'Serving Spoon', 'Slotted Spoon', 'Spaghetti Server', 'Tongs', 'Whisk', 'Spatula', 'Ladle', 'Pizza Cutter', 'Can Opener', 'Bottle Opener', 'Corkscrew', 'Measuring Cups', 'Measuring Spoons', 'Colander', 'Strainer', 'Peeler', 'Grater', 'Mortar and Pestle', 'Cutting Board', 'Kitchen Shears', 'Chef\'s Knife', 'Bread Knife', 'Paring Knife', 'Utility Knife', "milk", "bread", "eggs", "butter", "cheese", "yogurt", "rice", "pasta", "canned tomatoes", "beans", "flour", "sugar", "salt", "pepper", "oil", "vinegar", "ketchup", "mustard", "mayonnaise", "jam", "peanut butter", "coffee", "tea", "juice", "soda", "water", "chocolate", "cookies", "chips", "nuts", "fresh vegetables", "fresh fruits", "meat", "fish", "toilet paper", "paper towels", "dish soap", "laundry detergent", "cleaning supplies", "flour", "sugar", "brown sugar", "confectioner's sugar", "granulated sugar", "honey", "molasses", "corn syrup", "agave nectar", "maple syrup", "rice", "pasta", "quinoa", "couscous", "oats", "cereal", "bread", "bagels", "croissants", "rolls", "muffins", "biscuits", "tortillas", "eggs", "milk", "cream", "butter", "margarine", "cheese", "yogurt", "sour cream", "ice cream", "frozen yogurt", "whipped cream", "whipped topping", "mayonnaise", "ketchup", "mustard", "relish", "pickles", "olives", "salsa", "chips", "crackers", "pretzels", "popcorn", "jerky", "nuts", "peanut butter", "almond butter", "jelly", "jam", "fruit preserves", "canned fruit", "fresh fruit", "dried fruit", "fresh vegetables", "frozen vegetables", "canned vegetables", "potatoes", "onions", "garlic", "peppers", "tomatoes", "lettuce", "spinach", "kale", "cabbage", "carrots", "celery", "broccoli", "cauliflower", "green beans", "peas", "corn", "mushrooms", "zucchini", "squash", "avocado", "apples", "bananas", "oranges", "grapes", "lemons", "limes", "berries", "peaches", "plums", "nectarines", "cherries", "pineapple", "watermelon", "canteloupe", "honeydew", "spices", "salt", "pepper", "cumin", "coriander", "paprika", "cinnamon", "nutmeg", "ginger", "garlic powder", "onion powder", "oregano", "basil", "thyme", "rosemary", "bay leaves", "curry powder", "chili powder", "cayenne pepper", "turmeric", "vanilla extract", "almond extract", "olive oil", "vegetable oil", "canola oil", "coconut oil", "balsamic vinegar", "red wine vinegar", "white wine vinegar", "apple cider vinegar", "juice", "orange juice", "apple juice", "grape juice", "cranberry juice", "tomato juice", "vegetable juice", "soda", "cola", "lemon-lime", "root beer", "ginger ale", "tonic water", "club soda", "sparkling water", "still water", "flavored water", "sports drinks", "energy drinks", "coffee", "tea", "hot chocolate", "chai", "matcha", "protein powder", "vitamin supplements", "medications", "cleaning supplies"];
+        function search(str) {
+            let results = [];
+            const val = str.toLowerCase();
+            for (i = 0; i < wordArray.length; i++) {
+                if (wordArray[i].toLowerCase().indexOf(val) > -1) {
+                    results.push(wordArray[i]);
+                }
+            }
+            return results;
+        }
+        function searchHandler(e) {
+            const inputVal = e.currentTarget.value;
+            let results = [];
+            if (inputVal.length > 0) {
+                results = search(inputVal);
+            }
+            showSuggestions(results, inputVal);
+        }
+        function showSuggestions(results, inputVal) {
+            suggestions.innerHTML = '';
+            if (results.length > 0) {
+                for (i = 0; i < results.length; i++) {
+                    let item = results[i];
+                    // Highlights only the first match
+                    // TODO: highlight all matches
+                    const match = item.match(new RegExp(inputVal, 'i'));
+                    item = item.replace(match[0], `<strong>${match[0]}</strong>`);
+                    suggestions.innerHTML += `<li>${item}</li>`;
+                }
+                suggestions.classList.add('has-suggestions');
+            } else {
+                results = [];
+                suggestions.innerHTML = '';
+                suggestions.classList.remove('has-suggestions');
+            }
+        }
+        function useSuggestion(e) {
+            input.value = e.target.innerText;
+            input.focus();
+            suggestions.innerHTML = '';
+            suggestions.classList.remove('has-suggestions');
+        }
+        input.addEventListener('keyup', searchHandler);
+        suggestions.addEventListener('click', useSuggestion);
+    </script>
+
+    <!--script to search for product when user searched for product from list or product compare page-->
+    <script>
+        $(document).ready(()=>{
+            console.log(document.referrer);
+        if(document.referrer==="http://localhost:8080/list.html" || document.referrer==="http://localhost:8080/productCompare.html" || document.referrer==="http://localhost:8080/productcompare.html"){
+            const productSearch=localStorage.getItem("productSearch");
+            const locationSearch=localStorage.getItem("locationSearch");
+            
+            //removing data from local storage
+            localStorage.removeItem("productSearch");
+            localStorage.removeItem("locationSearch");
+
+            //setting navbar input values
+            if(productSearch.length>0 && locationSearch.length>0){
+                document.querySelector("#productName").value=productSearch;
+                document.querySelector("#search").value=locationSearch;
+                document.querySelector("#getDataButton").click();
+             
+            }
+        }else{
+            console.log("same page....search from navabr")
+        }
+        })
+        
+       
+    </script>
+</body>
+
+</html>

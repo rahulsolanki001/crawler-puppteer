@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Food Ordering HTML Template</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/icons.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/red-color.css">
+    <link rel="stylesheet" href="assets/css/yellow-color.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="stylle.css">
+    <style>
+        .loader-container {
+            display: none;
+            text-align: center;
+        }
+
+        .lds-dual-ring {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+        }
+
+        .lds-dual-ring:after {
+            content: " ";
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6px solid #e03335;
+            border-color: #e03335 #0000004a #e03335 #0000004a;
+            animation: lds-dual-ring 1.2s linear infinite;
+        }
+
+        @keyframes lds-dual-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body itemscope>
+    <main>
+        <div class="preloader">
+            <div id="cooking">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div id="area">
+                    <div id="sides">
+                        <div id="pan"></div>
+                        <div id="handle"></div>
+                    </div>
+                    <div id="pancake">
+                        <div id="pastry"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bread-crumbs-wrapper">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" title="" itemprop="url">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" title="" itemprop="url">Search</a></li>
+                    <li class="breadcrumb-item active">Restaurants Found</li>
+                </ol>
+            </div>
+            <section>
+                <div class="block gray-bg bottom-padd210 top-padd30">
+                    <div class="container">
+                        <div class="row comparing-container">
+
+                            <div class="col-md-12 p-0">
+                                <div class="obj">
+
+                                    <img id="brandImage" src="bournvita.jpg" alt="">
+                                    <h1 id="brandName">Bournvita</h1>
+
+                                </div>
+                            </div>
+                            <div class="col-md-12 p-0">
+                                <div class="price" id="priceContainer">
+                                    <div class="flex-container">
+                                        <figure><img src="assets/images/blinkit.svg" alt="" /></figure>
+                                        <h4>Rs. 40 </h4>
+                                        <button>Visit Store</button>
+                                    </div>
+                                    <div class="flex-container">
+                                        <figure><img
+                                                src="https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-7b2b540792556466133aea6e7c6ae513.png"
+                                                alt="" /></figure>
+                                        <h4>Rs. 100 </h4>
+                                        <button>Visit Store</button>
+                                    </div>
+                                    <!-- <div class="flex-container">
+                                        <figure ><img src="assets/images/blinkit.svg" alt=""/></figure>                            <h4>Rs. 200 </h4>
+                                        <button><span> Visit Store </span></button>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+        </div>
+
+
+        <!-- <section>
+            <div class="block no-padding red-bg">
+                <img class="bottom-clouds-mockup" src="assets/images/resource/clouds2.png" alt="clouds2.png" itemprop="image">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="app-sec">
+                                <div class="row">
+                                    <div class="col-md-4 hidden-sm col-md-offset-1 col-sm-4 col-sm-offset-0 col-lg-4 col-lg-offset-1">
+                                        <div class="app-mockup text-right overlape-110 wow fadeInUp" data-wow-delay="0.2s"><img src="assets/images/resource/app-mockup.png" alt="app-mockup.png" itemprop="image"></div>
+                                    </div>
+                                    <div class="col-md-6 col-md-offset-1 col-sm-12 col-sm-offset-0 col-lg-6 col-lg-offset-1">
+                                        <div class="app-info">
+                                            <h4 itemprop="headline">The Best Food Delivery App</h4>
+                                            <p itemprop="description">We have a launch team that focuses on one city at a time. At the end of the day, we're a marketplace. In order to make an effective marketplace, you need critical mass. We need enough restaurants that  quality and variety</p>
+                                            <div class="app-download-btns">
+                                                <a href="#" title="Google Play Store" itemprop="url" target="_blank"><img src="assets/images/resource/app-download-btn1.png" alt="app-download-btn1.png" itemprop="image"></a>
+                                                <a href="#" title="Apple App Store" itemprop="url" target="_blank"><img src="assets/images/resource/app-download-btn2.png" alt="app-download-btn2.png" itemprop="image"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>red section -->
+
+        <footer>
+            <div class="block top-padd80 bottom-padd80 dark-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="footer-data">
+                                <div class="row">
+                                    <div class="col-md-10 col-sm-10 col-lg-6">
+                                        <div class="widget about_widget wow fadeIn" data-wow-delay="0.1s">
+                                            <div class="logo">
+                                                <h1 itemprop="headline"><a href="#" title="Home" itemprop="url"><img
+                                                            src="assets/images/logo.png" alt="logo.png"
+                                                            itemprop="image"></a>
+                                                </h1>
+                                            </div>
+                                            <p itemprop="description">Food Ordering is a Premium HTML Template. Best
+                                                choice for your online store. Let purchase it to enjoy now</p>
+                                            <div class="social2">
+                                                <a class="brd-rd50" href="#" title="Facebook" itemprop="url"
+                                                    target="_blank"><i class="fa fa-facebook"></i></a>
+                                                <a class="brd-rd50" href="#" title="Google Plus" itemprop="url"
+                                                    target="_blank"><i class="fa fa-google-plus"></i></a>
+                                                <a class="brd-rd50" href="#" title="Twitter" itemprop="url"
+                                                    target="_blank"><i class="fa fa-twitter"></i></a>
+                                                <a class="brd-rd50" href="#" title="Pinterest" itemprop="url"
+                                                    target="_blank"><i class="fa fa-pinterest"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2 col-sm-2 col-lg-2">
+                                        <div class="widget get_in_touch wow fadeIn" data-wow-delay="0.4s">
+                                            <h4 class="widget-title" itemprop="headline">GET IN TOUCH</h4>
+                                            <ul>
+                                                <li><i class="fa fa-map-marker"></i>sfdffefefwfewfewf sector 153
+                                                    Noida</li>
+                                                <li><i class="fa fa-phone"></i> +91 - 18001982374</li>
+                                                <li><i class="fa fa-envelope"></i> <a href="#" title=""
+                                                        itemprop="url">JayyantPanwar80@gmail.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- Footer Data -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- footer -->
+        <div class="bottom-bar dark-bg text-center">
+
+            <div class="log-popup text-center">
+                <div class="sign-popup-wrapper brd-rd5">
+                    <div class="sign-popup-inner brd-rd5">
+                        <a class="log-close-btn" href="#" title="" itemprop="url"><i class="fa fa-close"></i></a>
+                        <div class="sign-popup-title text-center">
+                            <h4 itemprop="headline">SIGN IN</h4>
+                            <span>with your social network</span>
+                        </div>
+                        <div class="popup-social text-center">
+                            <a class="facebook brd-rd3" href="#" title="Facebook" itemprop="url" target="_blank"><i
+                                    class="fa fa-facebook"></i> Facebook</a>
+                            <a class="google brd-rd3" href="#" title="Google Plus" itemprop="url" target="_blank"><i
+                                    class="fa fa-google-plus"></i> Google</a>
+                            <a class="twitter brd-rd3" href="#" title="Twitter" itemprop="url" target="_blank"><i
+                                    class="fa fa-twitter"></i> Twitter</a>
+                        </div>
+                        <span class="popup-seprator text-center"><i class="brd-rd50">or</i></span>
+                        <form class="sign-form">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <input class="brd-rd3" type="text" placeholder="Username or Email">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <input class="brd-rd3" type="password" placeholder="Password">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <button class="red-bg brd-rd3" type="submit">SIGN IN</button>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <a class="sign-btn" href="#" title="" itemprop="url">Not a member? Sign up</a>
+                                    <a class="recover-btn" href="#" title="" itemprop="url">Recover my password</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sign-popup text-center">
+                <div class="sign-popup-wrapper brd-rd5">
+                    <div class="sign-popup-inner brd-rd5">
+                        <a class="sign-close-btn" href="#" title="" itemprop="url"><i class="fa fa-close"></i></a>
+                        <div class="sign-popup-title text-center">
+                            <h4 itemprop="headline">SIGN UP</h4>
+                            <span>with your social network</span>
+                        </div>
+                        <div class="popup-social text-center">
+                            <a class="facebook brd-rd3" href="#" title="Facebook" itemprop="url" target="_blank"><i
+                                    class="fa fa-facebook"></i> Facebook</a>
+                            <a class="google brd-rd3" href="#" title="Google Plus" itemprop="url" target="_blank"><i
+                                    class="fa fa-google-plus"></i> Google</a>
+                            <a class="twitter brd-rd3" href="#" title="Twitter" itemprop="url" target="_blank"><i
+                                    class="fa fa-twitter"></i> Twitter</a>
+                        </div>
+                        <span class="popup-seprator text-center"><i class="brd-rd50">or</i></span>
+                        <form class="sign-form">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <input class="brd-rd3" type="text" placeholder="Username">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <input class="brd-rd3" type="email" placeholder="Email">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <input class="brd-rd3" type="password" placeholder="Password">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <button class="red-bg brd-rd3" type="submit">REGISTER NOW</button>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <a class="sign-btn" href="#" title="" itemprop="url">Already Registered? Sign in</a>
+                                    <a class="recover-btn" href="#" title="" itemprop="url">Recover my password</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </main><!-- Main Wrapper -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        let singleData = JSON.parse(localStorage.getItem("parseData"))[0]
+        $("#brandImage").attr("src", singleData.image)
+        $("#brandName").html(singleData.name)
+
+        let jsonData = localStorage.getItem("searchedData")
+        jsonData = JSON.parse(jsonData);
+        console.log(jsonData)
+        let renderHtml = "";
+
+        let filterData = jsonData.brandWisData.forEach((obj, index) => {
+            obj.data.forEach((item, index) => {
+                item.Name.forEach((o, i) => {
+                    if (o == singleData.name) {
+                        console.log(o)
+                        if (i != 4) {
+                            renderHtml += `<div class="flex-container">
+                                <figure ><img src="${obj.brandName == "Blinkit" ? "assets/images/blinkit.svg" : "https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-7b2b540792556466133aea6e7c6ae513.png"}" alt=""/></figure>
+                                <div class="content" style="flex:1;text-align:center">
+                                <h4>${item.price[i]} </h4>
+                                <span>${item.weight[i]}</span>
+                                </div>
+                                <button>Visit Store</button>
+                            </div>`;
+                        }
+                    }
+                })
+            })
+        })
+        $("#priceContainer").html(renderHtml)
+    </script>
+</body>
+
+</html>
